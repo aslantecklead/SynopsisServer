@@ -1,8 +1,10 @@
 import os
 import shutil
-from flask import Flask, request, send_file
+from flask import Flask, request
 from pytube import YouTube
 from flask_cors import CORS, cross_origin
+import subCreator
+import re
 
 app = Flask(__name__)
 CORS(app)
@@ -15,10 +17,10 @@ ready = False
 def download_audio():
     global ready
     try:
+        subCreator.delete_old_subs()
         if debug_mode:
             print("Начало процесса загрузки аудио")
 
-        # Удаление файлов из папки videos
         directory = './videos'
         for filename in os.listdir(directory):
             file_path = os.path.join(directory, filename)
@@ -52,7 +54,10 @@ def download_audio():
             if debug_mode:
                 print("Аудио успешно загружено")
 
-            return send_file(new_path, as_attachment=True)
+            if ready:
+                subCreator.create_subtitles()
+
+            return "Аудио успешно загружено"
         else:
             if debug_mode:
                 print("Аудиоформат не доступен")
@@ -64,6 +69,17 @@ def download_audio():
     finally:
         if debug_mode:
             print("Конец процесса загрузки аудио")
+
+
+@app.route('/subtitles', methods=['GET'])
+@cross_origin()
+def read_subs():
+    try:
+        print("Get subs")
+    except Exception as e:
+        if debug_mode:
+            print("Ошибка при загрузке аудио:", e)
+        return str(e), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
