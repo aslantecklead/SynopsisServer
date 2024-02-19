@@ -27,7 +27,7 @@ def create_subtitles():
         if not os.path.exists(subs_directory):
             os.makedirs(subs_directory)
 
-        subs_file_path = os.path.join(subs_directory, 'subs.vtt')
+        subs_file_path = os.path.join(subs_directory, 'subs.txt')
         with open(subs_file_path, "w") as f:
             f.write(subs)
         subsReady = True

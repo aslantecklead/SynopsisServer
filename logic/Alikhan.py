@@ -1,6 +1,6 @@
 import os
 import shutil
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from pytube import YouTube
 from flask_cors import CORS, cross_origin
 import subCreator
@@ -75,7 +75,7 @@ def download_audio():
 @cross_origin()
 def read_subs():
     try:
-        subs_file_path = './subs/subs.vtt'
+        subs_file_path = './subs/subs.txt'
 
         if not os.path.exists(subs_file_path):
             return "Subtitles file not found", 404
@@ -85,11 +85,30 @@ def read_subs():
 
         with open(subs_file_path, 'r', encoding='utf-8', errors='ignore') as file:
             subtitles = file.read()
-        return subtitles
+
+        # Преобразуйте содержимое файла с субтитрами в JSON
+        subtitles_json = vtt_to_json(subtitles)
+
+        # Верните JSON в ответе на запрос
+        return jsonify(subtitles_json)
     except Exception as e:
         if debug_mode:
             print("Ошибка при чтении субтитров:", e)
         return str(e), 500
+
+def vtt_to_json(vtt_text):
+    subtitles = []
+    lines = vtt_text.split('\n\n')
+    for line in lines:
+        if '-->' in line:
+            times, text = line.split('\n', 1)
+            start_time, end_time = times.split(' --> ')
+            subtitles.append({
+                "startTime": start_time,
+                "endTime": end_time,
+                "text": text
+            })
+    return subtitles
 
 if __name__ == '__main__':
     app.run(debug=True)
