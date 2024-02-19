@@ -21,7 +21,7 @@ def create_subtitles():
 
     if video_file_path:
         transcriber = aai.Transcriber().transcribe(video_file_path)
-        subs = transcriber.export_subtitles_vtt()
+        subs = transcriber.export_subtitles_vtt(chars_per_caption=150)
 
         subs_directory = os.path.join(current_directory, '..', 'subs')
         if not os.path.exists(subs_directory):

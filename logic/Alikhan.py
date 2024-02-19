@@ -75,10 +75,20 @@ def download_audio():
 @cross_origin()
 def read_subs():
     try:
-        print("Get subs")
+        subs_file_path = './subs/subs.vtt'
+
+        if not os.path.exists(subs_file_path):
+            return "Subtitles file not found", 404
+
+        if os.path.getsize(subs_file_path) == 0:
+            return "Subtitles file is empty", 500
+
+        with open(subs_file_path, 'r', encoding='utf-8', errors='ignore') as file:
+            subtitles = file.read()
+        return subtitles
     except Exception as e:
         if debug_mode:
-            print("Ошибка при загрузке аудио:", e)
+            print("Ошибка при чтении субтитров:", e)
         return str(e), 500
 
 if __name__ == '__main__':
