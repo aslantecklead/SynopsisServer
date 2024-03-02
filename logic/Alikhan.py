@@ -71,7 +71,7 @@ def download_audio():
             print("Конец процесса загрузки аудио")
 
 
-@app.route('/subtitles', methods=['GET'])
+@app.route('/', methods=['GET'])
 @cross_origin()
 def read_subs():
     try:
