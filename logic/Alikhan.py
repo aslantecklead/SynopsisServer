@@ -31,32 +31,65 @@ def download_audio():
                 print("Ошибка при удалении файла:", e)
 
         video_url = request.args.get('url')
-        subCreator.create_subtitles(video_url)
+        yt = YouTube(video_url)
+        audio_stream = yt.streams.filter(only_audio=True).first()
 
-        return "Аудио успешно загружено и субтитры созданы"
+        if audio_stream:
+            filename = audio_stream.default_filename
+            new_path = os.path.join(directory, filename)
+
+            if debug_mode:
+                print("Начало загрузки аудио...")
+
+            audio_stream.download(output_path=directory, filename=filename)
+
+            if filename.endswith('.mp4'):
+                mp3_filename = filename[:-4] + '.mp3'
+                mp3_path = os.path.join(directory, mp3_filename)
+                shutil.move(new_path, mp3_path)
+                new_path = mp3_path
+
+            ready = True
+
+            if debug_mode:
+                print("Аудио успешно загружено")
+
+            if ready:
+                subCreator.create_subtitles()
+
+            return "Аудио успешно загружено"
+        else:
+            if debug_mode:
+                print("Аудиоформат не доступен")
+            return "Аудиоформат не доступен", 404
     except Exception as e:
         if debug_mode:
-            print("Ошибка при загрузке аудио и создании субтитров:", e)
+            print("Ошибка при загрузке аудио:", e)
         return str(e), 500
+    finally:
+        if debug_mode:
+            print("Конец процесса загрузки аудио")
 
 
-@app.route('/', methods=['GET'])
+@app.route('/subtitles', methods=['GET'])
 @cross_origin()
 def read_subs():
     try:
         subs_file_path = './subs/subs.txt'
 
         if not os.path.exists(subs_file_path):
-            return "Файл субтитров не найден", 404
+            return "Subtitles file not found", 404
 
         if os.path.getsize(subs_file_path) == 0:
-            return "Файл субтитров пуст", 500
+            return "Subtitles file is empty", 500
 
         with open(subs_file_path, 'r', encoding='utf-8', errors='ignore') as file:
             subtitles = file.read()
 
+        # Преобразуйте содержимое файла с субтитрами в JSON
         subtitles_json = vtt_to_json(subtitles)
 
+        # Верните JSON в ответе на запрос
         return jsonify(subtitles_json)
     except Exception as e:
         if debug_mode:
