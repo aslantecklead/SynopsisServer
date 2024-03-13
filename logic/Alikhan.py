@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify
 from pytube import YouTube
 from flask_cors import CORS, cross_origin
 import subCreator
+from math import ceil
 from urllib.parse import urlparse, parse_qs
 
 app = Flask(__name__)
@@ -11,7 +12,7 @@ CORS(app)
 
 debug_mode = True
 ready = False
-last_video_code = None  # Глобальная переменная для хранения последнего video_code
+last_video_code = None
 
 @app.route('/download', methods=['GET'])
 @cross_origin()
@@ -55,11 +56,13 @@ def download_audio():
                 print("Аудио успешно загружено")
 
             if ready:
-                parsed_url = urlparse(video_url)
-                last_video_code = parse_qs(parsed_url.query).get('v', [''])[0]  # Обновляем last_video_code
-                subCreator.create_subtitles(last_video_code)
+                video_id = extract_video_id(video_url)
+                if video_id:
+                    subCreator.create_subtitles(video_id)
+                else:
+                    print("Не удалось извлечь ID видео из URL.")
 
-            return "Аудио успешно загружено"
+            return "Успешная генерация", 200
         else:
             if debug_mode:
                 print("Аудиоформат не доступен")
@@ -79,12 +82,11 @@ def find_newest_subtitles():
     newest_subtitles = None
     newest_time = 0
 
-    if last_video_code:  # Если есть сохранённый last_video_code, ищем файл с таким именем
+    if last_video_code:
         subs_file_path = os.path.join(subs_directory, f'{last_video_code}.txt')
         if os.path.exists(subs_file_path):
             return subs_file_path
 
-    # Если нет сохранённого last_video_code или файла с таким именем, ищем самый новый файл
     for filename in os.listdir(subs_directory):
         file_path = os.path.join(subs_directory, filename)
         if os.path.isfile(file_path):
@@ -94,6 +96,7 @@ def find_newest_subtitles():
                 newest_subtitles = file_path
 
     return newest_subtitles
+
 
 @app.route('/', methods=['GET'])
 @cross_origin()
@@ -126,17 +129,63 @@ def vtt_to_json(vtt_text):
     for line in lines:
         if '-->' in line:
             times, text = line.split('\n', 1)
-            start_time, end_time = times.split(' --> ')
+            start_time_str, end_time_str = times.split(' --> ')
+            duration = calculate_duration(start_time_str, end_time_str)
+
+            duration = round(duration)
+
+            start_time = start_time_str
+            end_time = end_time_str
             subtitle = {
                 "id": index,
                 "startTime": start_time,
                 "endTime": end_time,
+                "duration": duration,
                 "text": text
             }
             index += 1
             subtitles.append(subtitle)
     return subtitles
 
+def calculate_duration(start_time_str, end_time_str):
+    start_parts = start_time_str.split(':')
+    end_parts = end_time_str.split(':')
+
+    start_seconds = int(start_parts[0]) * 60 + float(start_parts[1])
+    end_seconds = int(end_parts[0]) * 60 + float(end_parts[1])
+
+    duration_seconds = end_seconds - start_seconds
+
+    return int(ceil(duration_seconds))
+
+
+def time_to_seconds(time_str):
+    parts = time_str.split(':')
+    if '.' in parts[-1]:
+        seconds, milliseconds = parts[-1].split('.')
+        seconds = int(seconds)
+        milliseconds = int(milliseconds)
+    else:
+        seconds = int(parts[-1])
+        milliseconds = 0
+    minutes = int(parts[-2])
+    if len(parts) > 2:
+        hours = int(parts[-3])
+    else:
+        hours = 0
+    total_seconds = hours * 3600 + minutes * 60 + seconds + milliseconds / 1000
+    return total_seconds
+
+
+def extract_video_id(video_url):
+    try:
+        url_parts = video_url.split("/")
+        video_id = url_parts[-1]
+        return video_id
+    except Exception as e:
+        print("Ошибка при извлечении ID видео:", e)
+        return None
+
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0')
