@@ -48,7 +48,7 @@ def download_audio():
                 mp3_filename = filename[:-4] + '.mp3'
                 mp3_path = os.path.join(directory, mp3_filename)
                 shutil.move(new_path, mp3_path)
-                new_path = mp3_path
+                ##new_path = mp3_path
 
             ready = True
 
@@ -98,14 +98,16 @@ def find_newest_subtitles():
     return newest_subtitles
 
 
-@app.route('/', methods=['GET'])
-@cross_origin()
 def read_subs():
     try:
-        subs_file_path = find_newest_subtitles()
+        video_url = request.args.get('url')
+        video_id = extract_video_id(video_url)
+        if not video_id:
+            return "Invalid video URL", 400
 
+        subs_file_path = find_subtitles(video_id)
         if not subs_file_path or not os.path.exists(subs_file_path):
-            return "Subtitles file not found", 404
+            return "Subtitles not found for the specified video", 404
 
         if os.path.getsize(subs_file_path) == 0:
             return "Subtitles file is empty", 500
@@ -118,7 +120,7 @@ def read_subs():
         return jsonify(subtitles_json)
     except Exception as e:
         if debug_mode:
-            print("Ошибка при чтении субтитров:", e)
+            print("Error reading subtitles:", e)
         return str(e), 500
 
 
@@ -140,12 +142,13 @@ def vtt_to_json(vtt_text):
                 "id": index,
                 "startTime": start_time,
                 "endTime": end_time,
-                "duration": duration,
+                "duration": duration - 1,
                 "text": text
             }
             index += 1
             subtitles.append(subtitle)
     return subtitles
+
 
 def calculate_duration(start_time_str, end_time_str):
     start_parts = start_time_str.split(':')
@@ -179,8 +182,10 @@ def time_to_seconds(time_str):
 
 def extract_video_id(video_url):
     try:
-        url_parts = video_url.split("/")
-        video_id = url_parts[-1]
+        parsed_url = urlparse(video_url)
+        query = parse_qs(parsed_url.query)
+        video_id = query['v'][0]
+        print(video_id)
         return video_id
     except Exception as e:
         print("Ошибка при извлечении ID видео:", e)
