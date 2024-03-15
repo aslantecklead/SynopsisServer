@@ -22,6 +22,23 @@ def download_audio():
         if debug_mode:
             print("Начало процесса загрузки аудио")
 
+        video_url = request.args.get('url')
+        video_id = extract_video_id(video_url)
+        if not video_id:
+            return "Invalid video URL", 400
+
+        subs_file_path = find_newest_subtitles()
+        if subs_file_path and os.path.exists(subs_file_path):
+            if debug_mode:
+                print("Субтитры уже существуют для данного видео. Путь к субтитрам:", subs_file_path)
+            with open(subs_file_path, 'r', encoding='utf-8', errors='ignore') as file:
+                subtitles = file.read()
+            subtitles_json = vtt_to_json(subtitles)
+            return jsonify(subtitles_json), 200
+        else:
+            if debug_mode:
+                print("Субтитры не найдены. Продолжение загрузки аудио...")
+
         directory = './videos'
         for filename in os.listdir(directory):
             file_path = os.path.join(directory, filename)
@@ -31,7 +48,6 @@ def download_audio():
             except Exception as e:
                 print("Ошибка при удалении файла:", e)
 
-        video_url = request.args.get('url')
         yt = YouTube(video_url)
         audio_stream = yt.streams.filter(only_audio=True).first()
 
@@ -85,6 +101,7 @@ def find_newest_subtitles():
     if last_video_code:
         subs_file_path = os.path.join(subs_directory, f'{last_video_code}.txt')
         if os.path.exists(subs_file_path):
+            print("Найдены субтитры для последнего видео:", subs_file_path)
             return subs_file_path
 
     for filename in os.listdir(subs_directory):
@@ -179,8 +196,9 @@ def time_to_seconds(time_str):
 
 def extract_video_id(video_url):
     try:
-        url_parts = video_url.split("/")
-        video_id = url_parts[-1]
+        parsed_url = urlparse(video_url)
+        query = parse_qs(parsed_url.query)
+        video_id = query['v'][0]
         return video_id
     except Exception as e:
         print("Ошибка при извлечении ID видео:", e)
