@@ -27,7 +27,7 @@ def download_audio():
         if not video_id:
             return "Invalid video URL", 400
 
-        subs_file_path = find_newest_subtitles()
+        subs_file_path = find_subtitles_by_video_id(video_id)
         if subs_file_path and os.path.exists(subs_file_path):
             if debug_mode:
                 print("Субтитры уже существуют для данного видео. Путь к субтитрам:", subs_file_path)
@@ -72,13 +72,16 @@ def download_audio():
                 print("Аудио успешно загружено")
 
             if ready:
-                video_id = extract_video_id(video_url)
-                if video_id:
-                    subCreator.create_subtitles(video_id)
-                else:
-                    print("Не удалось извлечь ID видео из URL.")
+                subCreator.create_subtitles(video_id)
 
-            return "Успешная генерация", 200
+            subs_file_path = find_subtitles_by_video_id(video_id)
+            if subs_file_path and os.path.exists(subs_file_path):
+                with open(subs_file_path, 'r', encoding='utf-8', errors='ignore') as file:
+                    subtitles = file.read()
+                subtitles_json = vtt_to_json(subtitles)
+                return jsonify(subtitles_json), 200
+            else:
+                return "Subtitles not found", 404
         else:
             if debug_mode:
                 print("Аудиоформат не доступен")
@@ -91,35 +94,26 @@ def download_audio():
         if debug_mode:
             print("Конец процесса загрузки аудио")
 
-
-def find_newest_subtitles():
-    global last_video_code
+def find_subtitles_by_video_id(video_id):
     subs_directory = './subs'
-    newest_subtitles = None
-    newest_time = 0
-
-    if last_video_code:
-        subs_file_path = os.path.join(subs_directory, f'{last_video_code}.txt')
-        if os.path.exists(subs_file_path):
-            print("Найдены субтитры для последнего видео:", subs_file_path)
-            return subs_file_path
-
-    for filename in os.listdir(subs_directory):
-        file_path = os.path.join(subs_directory, filename)
-        if os.path.isfile(file_path):
-            file_time = os.path.getctime(file_path)
-            if file_time > newest_time:
-                newest_time = file_time
-                newest_subtitles = file_path
-
-    return newest_subtitles
-
+    subs_file_path = os.path.join(subs_directory, f'{video_id}.txt')
+    if os.path.exists(subs_file_path):
+        return subs_file_path
+    else:
+        return None
 
 @app.route('/', methods=['GET'])
 @cross_origin()
 def read_subs():
     try:
-        subs_file_path = find_newest_subtitles()
+        video_url = request.args.get('url')
+        video_id = None
+        if video_url:
+            video_id = extract_video_id(video_url)
+            if not video_id:
+                return "Invalid video URL", 400
+
+        subs_file_path = find_newest_subtitles() if not video_id else find_subtitles_by_video_id(video_id)
 
         if not subs_file_path or not os.path.exists(subs_file_path):
             return "Subtitles file not found", 404
@@ -163,6 +157,23 @@ def vtt_to_json(vtt_text):
             index += 1
             subtitles.append(subtitle)
     return subtitles
+
+
+def find_newest_subtitles():
+    subs_directory = './subs'
+    newest_subtitles = None
+    newest_time = 0
+
+    for filename in os.listdir(subs_directory):
+        file_path = os.path.join(subs_directory, filename)
+        if os.path.isfile(file_path):
+            file_time = os.path.getctime(file_path)
+            if file_time > newest_time:
+                newest_time = file_time
+                newest_subtitles = file_path
+
+    return newest_subtitles
+
 
 def calculate_duration(start_time_str, end_time_str):
     start_parts = start_time_str.split(':')

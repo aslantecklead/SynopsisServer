@@ -4,6 +4,7 @@ import assemblyai as aai
 
 subsReady = False
 
+
 def create_subtitles(video_code):
     global subsReady
     aai.settings.api_key = "5f4d8d4e034a4870b1b180ff4f804f52"
