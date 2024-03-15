@@ -1,11 +1,12 @@
 import os
 import shutil
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 from pytube import YouTube
 from flask_cors import CORS, cross_origin
 import subCreator
 from math import ceil
 from urllib.parse import urlparse, parse_qs
+
 
 app = Flask(__name__)
 CORS(app)
@@ -22,51 +23,61 @@ def download_audio():
         if debug_mode:
             print("Начало процесса загрузки аудио")
 
-        directory = './videos'
-        for filename in os.listdir(directory):
-            file_path = os.path.join(directory, filename)
-            try:
-                if os.path.isfile(file_path):
-                    os.unlink(file_path)
-            except Exception as e:
-                print("Ошибка при удалении файла:", e)
-
         video_url = request.args.get('url')
-        yt = YouTube(video_url)
-        audio_stream = yt.streams.filter(only_audio=True).first()
+        video_id = extract_video_id(video_url)
+        if not video_id:
+            return "Invalid video URL", 400
 
-        if audio_stream:
-            filename = audio_stream.default_filename
-            new_path = os.path.join(directory, filename)
-
+        subs_file_path = find_newest_subtitles()
+        if not subs_file_path or not os.path.exists(subs_file_path):
             if debug_mode:
-                print("Начало загрузки аудио...")
+                print("Субтитры не найдены. Начало загрузки аудио...")
+            directory = './videos'
+            for filename in os.listdir(directory):
+                file_path = os.path.join(directory, filename)
+                try:
+                    if os.path.isfile(file_path):
+                        os.unlink(file_path)
+                except Exception as e:
+                    print("Ошибка при удалении файла:", e)
 
-            audio_stream.download(output_path=directory, filename=filename)
+            yt = YouTube(video_url)
+            audio_stream = yt.streams.filter(only_audio=True).first()
 
-            if filename.endswith('.mp4'):
-                mp3_filename = filename[:-4] + '.mp3'
-                mp3_path = os.path.join(directory, mp3_filename)
-                shutil.move(new_path, mp3_path)
-                ##new_path = mp3_path
+            if audio_stream:
+                filename = audio_stream.default_filename
+                new_path = os.path.join(directory, filename)
 
-            ready = True
+                if debug_mode:
+                    print("Начало загрузки аудио...")
 
-            if debug_mode:
-                print("Аудио успешно загружено")
+                audio_stream.download(output_path=directory, filename=filename)
 
-            if ready:
-                video_id = extract_video_id(video_url)
-                if video_id:
+                if filename.endswith('.mp4'):
+                    mp3_filename = filename[:-4] + '.mp3'
+                    mp3_path = os.path.join(directory, mp3_filename)
+                    shutil.move(new_path, mp3_path)
+                    ##new_path = mp3_path
+
+                ready = True
+
+                if debug_mode:
+                    print("Аудио успешно загружено")
+
+                if ready:
                     subCreator.create_subtitles(video_id)
                 else:
                     print("Не удалось извлечь ID видео из URL.")
 
-            return "Успешная генерация", 200
+                return "Успешная генерация", 200
+            else:
+                if debug_mode:
+                    print("Аудиоформат не доступен")
+                return "Аудиоформат не доступен", 404
         else:
             if debug_mode:
-                print("Аудиоформат не доступен")
-            return "Аудиоформат не доступен", 404
+                print("Субтитры найдены. Перенаправление на /...")
+            return redirect("/")
     except Exception as e:
         if debug_mode:
             print("Ошибка при загрузке аудио:", e)
@@ -97,30 +108,24 @@ def find_newest_subtitles():
 
     return newest_subtitles
 
-
+@app.route('/', methods=['GET'])
+@cross_origin()
 def read_subs():
     try:
-        video_url = request.args.get('url')
-        video_id = extract_video_id(video_url)
-        if not video_id:
-            return "Invalid video URL", 400
+        subs_file_path = find_newest_subtitles()
 
-        subs_file_path = find_subtitles(video_id)
         if not subs_file_path or not os.path.exists(subs_file_path):
-            return "Subtitles not found for the specified video", 404
+            return "Subtitles file not found", 404
 
         if os.path.getsize(subs_file_path) == 0:
             return "Subtitles file is empty", 500
-
         with open(subs_file_path, 'r', encoding='utf-8', errors='ignore') as file:
             subtitles = file.read()
-
         subtitles_json = vtt_to_json(subtitles)
-
         return jsonify(subtitles_json)
     except Exception as e:
         if debug_mode:
-            print("Error reading subtitles:", e)
+            print("Ошибка при чтении субтитров:", e)
         return str(e), 500
 
 
@@ -160,7 +165,6 @@ def calculate_duration(start_time_str, end_time_str):
     duration_seconds = end_seconds - start_seconds
 
     return int(ceil(duration_seconds))
-
 
 def time_to_seconds(time_str):
     parts = time_str.split(':')
