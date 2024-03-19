@@ -16,6 +16,7 @@ debug_mode = True
 ready = False
 last_video_code = None
 
+
 @app.route('/translate_to_en', methods=['POST'])
 def translate_rus_text():
     data = request.json
@@ -47,22 +48,15 @@ def translate_eng_text():
     text = data['text']
 
     try:
-        translated_text = translate_from_english_to_russian(text)
+        if not text:
+            return jsonify({'translated_text': ''}), 200
+
+        translator = Translator()
+        translated_text = translator.translate(text, src='en', dest='ru').text
         return jsonify({'translated_text': translated_text}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-
-def translate_from_english_to_russian(english_text):
-    try:
-        if not english_text:
-            return ""
-        translator = Translator()
-        translated_text = translator.translate(english_text, src='en', dest='ru')
-        return translated_text.text
-    except Exception as e:
-        print("Произошла ошибка во время перевода:", e)
-        raise e
 
 @app.route('/download', methods=['GET'])
 @cross_origin()
