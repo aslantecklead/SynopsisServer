@@ -6,6 +6,8 @@ from flask_cors import CORS, cross_origin
 import subCreator
 from math import ceil
 from urllib.parse import urlparse, parse_qs
+from googletrans import Translator
+
 
 app = Flask(__name__)
 CORS(app)
@@ -13,6 +15,54 @@ CORS(app)
 debug_mode = True
 ready = False
 last_video_code = None
+
+@app.route('/translate_to_en', methods=['POST'])
+def translate_rus_text():
+    data = request.json
+
+    if 'text' not in data:
+        return jsonify({'error': 'Отсутствует поле текста в запросе'}), 400
+
+    text = data['text']
+
+    try:
+        if not text:
+            return jsonify({'translated_text': ''}), 200
+
+        translator = Translator()
+        translated_text = translator.translate(text, src='ru', dest='en')
+        return jsonify({'translated_text': translated_text.text}), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/translate_to_ru', methods=['POST'])
+def translate_eng_text():
+    data = request.json
+
+    if 'text' not in data:
+        return jsonify({'error': 'Missing text field in request'}), 400
+
+    text = data['text']
+
+    try:
+        translated_text = translate_from_english_to_russian(text)
+        return jsonify({'translated_text': translated_text}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+def translate_from_english_to_russian(english_text):
+    try:
+        if not english_text:
+            return ""
+        translator = Translator()
+        translated_text = translator.translate(english_text, src='en', dest='ru')
+        return translated_text.text
+    except Exception as e:
+        print("Произошла ошибка во время перевода:", e)
+        raise e
 
 @app.route('/download', methods=['GET'])
 @cross_origin()
@@ -94,6 +144,7 @@ def download_audio():
         if debug_mode:
             print("Конец процесса загрузки аудио")
 
+
 def find_subtitles_by_video_id(video_id):
     subs_directory = './subs'
     subs_file_path = os.path.join(subs_directory, f'{video_id}.txt')
@@ -101,6 +152,7 @@ def find_subtitles_by_video_id(video_id):
         return subs_file_path
     else:
         return None
+
 
 @app.route('/', methods=['GET'])
 @cross_origin()
@@ -223,6 +275,7 @@ def extract_video_id(video_url):
     except Exception as e:
         print("Ошибка при извлечении ID видео:", e)
         return None
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

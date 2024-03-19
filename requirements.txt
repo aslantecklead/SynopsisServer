@@ -3,3 +3,4 @@ Werkzeug==3.0.1
 assemblyai==0.22.0
 pytube==15.0.0
 flask_cors==4.0.0
+googletrans==4.0.0
