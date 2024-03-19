@@ -7,6 +7,8 @@ subsReady = False
 
 def create_subtitles(video_code):
     global subsReady
+    print("Starting subtitle creation process...")
+
     aai.settings.api_key = "5f4d8d4e034a4870b1b180ff4f804f52"
 
     current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -14,7 +16,7 @@ def create_subtitles(video_code):
     subs_file_path = os.path.join(subs_directory, f'{video_code}.txt')
 
     if os.path.exists(subs_file_path):
-        print("Субтитры уже существуют для данного видео.")
+        print("Subtitles already exist for this video.")
         subsReady = True
         return
 
@@ -27,6 +29,8 @@ def create_subtitles(video_code):
             break
 
     if video_file_path:
+        print("Transcribing audio to subtitles...")
+
         transcriber = aai.Transcriber().transcribe(video_file_path)
         subs = transcriber.export_subtitles_vtt(chars_per_caption=150)
 
@@ -36,6 +40,6 @@ def create_subtitles(video_code):
         with open(subs_file_path, "w") as f:
             f.write(subs)
         subsReady = True
-        print("Субтитры готовы")
+        print("Subtitles are ready")
     else:
-        print("Нет файлов формата MP3 в папке videos")
+        print("No MP3 files found in the 'videos' folder")

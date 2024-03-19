@@ -208,13 +208,21 @@ def time_to_seconds(time_str):
 def extract_video_id(video_url):
     try:
         parsed_url = urlparse(video_url)
-        query = parse_qs(parsed_url.query)
-        video_id = query['v'][0]
+        if parsed_url.netloc == 'youtu.be':
+            video_id = parsed_url.path[1:]  # Извлекаем ID видео из пути URL
+        elif parsed_url.netloc == 'www.youtube.com' and parsed_url.path == '/watch':
+            query = parse_qs(parsed_url.query)
+            video_id = query.get('v', [''])[0]  # Получаем значение параметра 'v' из запроса
+        else:
+            raise ValueError("Неподдерживаемый URL YouTube")
+
+        if not video_id:
+            raise ValueError("ID видео не найден в URL")
+
         return video_id
     except Exception as e:
         print("Ошибка при извлечении ID видео:", e)
         return None
-
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
