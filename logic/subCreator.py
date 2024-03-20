@@ -34,15 +34,12 @@ def create_subtitles(video_code):
         try:
             transcriber = aai.Transcriber().transcribe(video_file_path)
             subs = transcriber.export_subtitles_vtt(chars_per_caption=150)
-            print("1")
 
             if not os.path.exists(subs_directory):
                 os.makedirs(subs_directory)
-            print("2")
 
             with open(subs_file_path, "w") as f:
                 f.write(subs)
-                print("3")
 
             subsReady = True
             print("Subtitles are ready")
