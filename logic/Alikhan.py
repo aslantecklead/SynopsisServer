@@ -6,7 +6,6 @@ from flask_cors import CORS, cross_origin
 import subCreator
 from math import ceil
 from urllib.parse import urlparse, parse_qs
-from googletrans import Translator
 
 app = Flask(__name__)
 CORS(app)
@@ -62,6 +61,7 @@ def translate_from_english_to_russian(english_text):
     except Exception as e:
         print("Произошла ошибка во время перевода:", e)
         raise e
+
 
 @app.route('/download', methods=['GET'])
 @cross_origin()
