@@ -196,7 +196,7 @@ def vtt_to_json(vtt_text):
                 "id": index,
                 "startTime": start_time,
                 "endTime": end_time,
-                "duration": duration - 1,
+                "duration": duration - 1.35,
                 "text": text
             }
             index += 1
