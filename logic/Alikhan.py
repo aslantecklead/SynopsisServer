@@ -1,6 +1,6 @@
 import os
 import shutil
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, session
 from pytube import YouTube
 from flask_cors import CORS, cross_origin
 import subCreator
@@ -8,6 +8,7 @@ from math import ceil
 from urllib.parse import urlparse, parse_qs
 
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'
 CORS(app)
 
 debug_mode = True
@@ -66,7 +67,6 @@ def translate_from_english_to_russian(english_text):
 @app.route('/download', methods=['GET'])
 @cross_origin()
 def download_audio():
-    global ready, last_video_code
     try:
         if debug_mode:
             print("Начало процесса загрузки аудио")
@@ -75,6 +75,8 @@ def download_audio():
         video_id = extract_video_id(video_url)
         if not video_id:
             return "Invalid video URL", 400
+
+        session['last_video_id'] = video_id
 
         subs_file_path = find_subtitles_by_video_id(video_id)
         if subs_file_path and os.path.exists(subs_file_path):
@@ -143,6 +145,7 @@ def download_audio():
         if debug_mode:
             print("Конец процесса загрузки аудио")
 
+
 def find_subtitles_by_video_id(video_id):
     subs_directory = './subs'
     subs_file_path = os.path.join(subs_directory, f'{video_id}.txt')
@@ -155,32 +158,25 @@ def find_subtitles_by_video_id(video_id):
 @cross_origin()
 def read_subs():
     try:
-        video_url = request.args.get('url')
-        video_id = None
-        if video_url:
-            video_id = extract_video_id(video_url)
-            if not video_id:
-                return "Invalid video URL", 400
+        video_id = session.get('last_video_id')
 
-        subs_file_path = find_newest_subtitles() if not video_id else find_subtitles_by_video_id(video_id)
+        if not video_id:
+            return "No video selected", 404
 
+        subs_file_path = find_subtitles_by_video_id(video_id)
         if not subs_file_path or not os.path.exists(subs_file_path):
             return "Subtitles file not found", 404
-
         if os.path.getsize(subs_file_path) == 0:
             return "Subtitles file is empty", 500
-
         with open(subs_file_path, 'r', encoding='utf-8', errors='ignore') as file:
             subtitles = file.read()
-
         subtitles_json = vtt_to_json(subtitles)
-
         return jsonify(subtitles_json)
+
     except Exception as e:
         if debug_mode:
             print("Ошибка при чтении субтитров:", e)
         return str(e), 500
-
 
 def vtt_to_json(vtt_text):
     subtitles = []
@@ -200,7 +196,7 @@ def vtt_to_json(vtt_text):
                 "id": index,
                 "startTime": start_time,
                 "endTime": end_time,
-                "duration": duration,
+                "duration": duration - 1,
                 "text": text
             }
             index += 1
@@ -258,10 +254,10 @@ def extract_video_id(video_url):
     try:
         parsed_url = urlparse(video_url)
         if parsed_url.netloc == 'youtu.be':
-            video_id = parsed_url.path[1:]  # Извлекаем ID видео из пути URL
+            video_id = parsed_url.path[1:]
         elif parsed_url.netloc == 'www.youtube.com' and parsed_url.path == '/watch':
             query = parse_qs(parsed_url.query)
-            video_id = query.get('v', [''])[0]  # Получаем значение параметра 'v' из запроса
+            video_id = query.get('v', [''])[0]
         else:
             raise ValueError("Неподдерживаемый URL YouTube")
 
