@@ -6,6 +6,7 @@ from flask_cors import CORS, cross_origin
 import subCreator
 from math import ceil
 from urllib.parse import urlparse, parse_qs
+from googletrans import Translator
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -14,6 +15,7 @@ CORS(app)
 debug_mode = True
 ready = False
 last_video_code = None
+
 
 @app.route('/translate_to_en', methods=['POST'])
 def translate_rus_text():
@@ -196,7 +198,7 @@ def vtt_to_json(vtt_text):
                 "id": index,
                 "startTime": start_time,
                 "endTime": end_time,
-                "duration": duration - 1.35,
+                "duration": duration,
                 "text": text
             }
             index += 1
