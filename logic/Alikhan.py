@@ -3,19 +3,43 @@ import shutil
 from flask import Flask, request, jsonify, session
 from pytube import YouTube
 from flask_cors import CORS, cross_origin
-import subCreator
-from math import ceil
-from urllib.parse import urlparse, parse_qs
 from googletrans import Translator
+import logging
+import logging.handlers
+from urllib.parse import urlparse, parse_qs
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import sys
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 CORS(app)
 
-debug_mode = True
 ready = False
 last_video_code = None
 
+debug_mode = True
+
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+logging.basicConfig(
+    filename='app.log',
+    level=logging.DEBUG if debug_mode else logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logging.getLogger('requests').setLevel(logging.WARNING)
+
+
+console_handler = logging.StreamHandler(sys.stdout)
+console_handler.setLevel(logging.DEBUG if debug_mode else logging.INFO)
+console_handler.setFormatter(formatter)
+logging.getLogger('').addHandler(console_handler)
+
+logging.getLogger('requests').setLevel(logging.WARNING)
+@app.route('/generate_error', methods=['GET'])
+def generate_error():
+    1 / 0
 
 @app.route('/translate_to_en', methods=['POST'])
 def translate_rus_text():
@@ -35,22 +59,22 @@ def translate_rus_text():
         return jsonify({'translated_text': translated_text.text}), 200
 
     except Exception as e:
+        logging.error("Error occurred during translation:", exc_info=True)
         return jsonify({'error': str(e)}), 500
 
 
 @app.route('/translate_to_ru', methods=['POST'])
 def translate_eng_text():
     data = request.json
-
     if 'text' not in data:
         return jsonify({'error': 'Missing text field in request'}), 400
-
     text = data['text']
 
     try:
         translated_text = translate_from_english_to_russian(text)
         return jsonify({'translated_text': translated_text}), 200
     except Exception as e:
+        logging.error("Error occurred during translation:", exc_info=True)
         return jsonify({'error': str(e)}), 500
 
 
@@ -62,7 +86,7 @@ def translate_from_english_to_russian(english_text):
         translated_text = translator.translate(english_text, src='en', dest='ru')
         return translated_text.text
     except Exception as e:
-        print("Произошла ошибка во время перевода:", e)
+        logging.error("Error occurred during translation:", exc_info=True)
         raise e
 
 
@@ -71,7 +95,7 @@ def translate_from_english_to_russian(english_text):
 def download_audio():
     try:
         if debug_mode:
-            print("Начало процесса загрузки аудио")
+            logging.debug("Beginning audio download process")
 
         video_url = request.args.get('url')
         video_id = extract_video_id(video_url)
@@ -83,14 +107,14 @@ def download_audio():
         subs_file_path = find_subtitles_by_video_id(video_id)
         if subs_file_path and os.path.exists(subs_file_path):
             if debug_mode:
-                print("Субтитры уже существуют для данного видео. Путь к субтитрам:", subs_file_path)
+                logging.debug("Subtitles already exist for this video. Subtitles path: %s", subs_file_path)
             with open(subs_file_path, 'r', encoding='utf-8', errors='ignore') as file:
                 subtitles = file.read()
             subtitles_json = vtt_to_json(subtitles)
             return jsonify(subtitles_json), 200
         else:
             if debug_mode:
-                print("Субтитры не найдены. Продолжение загрузки аудио...")
+                logging.debug("Subtitles not found. Continuing audio download...")
 
         directory = './videos'
         for filename in os.listdir(directory):
@@ -99,7 +123,7 @@ def download_audio():
                 if os.path.isfile(file_path):
                     os.unlink(file_path)
             except Exception as e:
-                print("Ошибка при удалении файла:", e)
+                logging.error("Error deleting file: %s", e)
 
         yt = YouTube(video_url)
         audio_stream = yt.streams.filter(only_audio=True).first()
@@ -109,7 +133,7 @@ def download_audio():
             new_path = os.path.join(directory, filename)
 
             if debug_mode:
-                print("Начало загрузки аудио...")
+                logging.debug("Starting audio download...")
 
             audio_stream.download(output_path=directory, filename=filename)
 
@@ -122,7 +146,7 @@ def download_audio():
             ready = True
 
             if debug_mode:
-                print("Аудио успешно загружено")
+                logging.debug("Audio downloaded successfully")
 
             if ready:
                 subCreator.create_subtitles(video_id)
@@ -137,15 +161,14 @@ def download_audio():
                 return "Subtitles not found", 404
         else:
             if debug_mode:
-                print("Аудиоформат не доступен")
-            return "Аудиоформат не доступен", 404
+                logging.debug("Audio format not available")
+            return "Audio format not available", 404
     except Exception as e:
-        if debug_mode:
-            print("Ошибка при загрузке аудио:", e)
+        logging.error("Error occurred during audio download:", exc_info=True)
         return str(e), 500
     finally:
         if debug_mode:
-            print("Конец процесса загрузки аудио")
+            logging.debug("End of audio download process")
 
 
 def find_subtitles_by_video_id(video_id):
@@ -176,8 +199,7 @@ def read_subs():
         return jsonify(subtitles_json)
 
     except Exception as e:
-        if debug_mode:
-            print("Ошибка при чтении субтитров:", e)
+        logging.error("Error occurred while reading subtitles:", exc_info=True)
         return str(e), 500
 
 def vtt_to_json(vtt_text):
@@ -204,7 +226,6 @@ def vtt_to_json(vtt_text):
             index += 1
             subtitles.append(subtitle)
     return subtitles
-
 
 def find_newest_subtitles():
     subs_directory = './subs'
@@ -272,4 +293,4 @@ def extract_video_id(video_url):
         return None
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0')
