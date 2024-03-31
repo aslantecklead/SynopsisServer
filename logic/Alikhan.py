@@ -5,7 +5,7 @@ from pytube import YouTube
 from flask_cors import CORS, cross_origin
 from googletrans import Translator
 from urllib.parse import urlparse, parse_qs
-from subCreator import create_subtitles
+import subCreator
 from math import ceil
 import sys
 
@@ -42,22 +42,22 @@ def translate_rus_text():
         return jsonify({'translated_text': translated_text.text}), 200
 
     except Exception as e:
-        print("Error occurred during translation:", e)
         return jsonify({'error': str(e)}), 500
 
 
 @app.route('/translate_to_ru', methods=['POST'])
 def translate_eng_text():
     data = request.json
+
     if 'text' not in data:
         return jsonify({'error': 'Missing text field in request'}), 400
+
     text = data['text']
 
     try:
         translated_text = translate_from_english_to_russian(text)
         return jsonify({'translated_text': translated_text}), 200
     except Exception as e:
-        print("Error occurred during translation:", e)
         return jsonify({'error': str(e)}), 500
 
 
@@ -69,9 +69,8 @@ def translate_from_english_to_russian(english_text):
         translated_text = translator.translate(english_text, src='en', dest='ru')
         return translated_text.text
     except Exception as e:
-        print("Error occurred during translation:", e)
+        print("Произошла ошибка во время перевода:", e)
         raise e
-
 
 @app.route('/download', methods=['GET'])
 @cross_origin()
@@ -132,7 +131,7 @@ def download_audio():
                 print("Audio downloaded successfully")
 
             if ready:
-                create_subtitles(video_id)
+                subCreator.create_subtitles(video_id)
 
             subs_file_path = find_subtitles_by_video_id(video_id)
             if subs_file_path and os.path.exists(subs_file_path):
@@ -205,7 +204,7 @@ def vtt_to_json(vtt_text):
                 "id": index,
                 "startTime": start_time,
                 "endTime": end_time,
-                "duration": duration,
+                "duration": duration - 0.5,
                 "text": text
             }
             index += 1
