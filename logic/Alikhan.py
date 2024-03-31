@@ -5,6 +5,8 @@ from pytube import YouTube
 from flask_cors import CORS, cross_origin
 from googletrans import Translator
 from urllib.parse import urlparse, parse_qs
+from subCreator import create_subtitles
+from math import ceil
 import sys
 
 app = Flask(__name__)
@@ -130,7 +132,7 @@ def download_audio():
                 print("Audio downloaded successfully")
 
             if ready:
-                subCreator.create_subtitles(video_id)
+                create_subtitles(video_id)
 
             subs_file_path = find_subtitles_by_video_id(video_id)
             if subs_file_path and os.path.exists(subs_file_path):

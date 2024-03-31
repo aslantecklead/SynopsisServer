@@ -1,0 +1,709 @@
+WEBVTT
+
+00:00.250 --> 00:03.754
+It. Hey, get over here. On the count of three, your wifi
+
+00:03.802 --> 00:08.320
+password's gonna appear on this monitor. Ready? One, two. Got them.
+
+00:09.730 --> 00:12.926
+Pretty neat trick. And sure, maybe I
+
+00:12.948 --> 00:16.622
+didn't get it for all of you, but a shocking number of people are
+
+00:16.676 --> 00:20.138
+still either using the default password that came with their device,
+
+00:20.234 --> 00:23.694
+or their phone number, or a loved one's phone number, which you
+
+00:23.732 --> 00:27.446
+may already know is is a huge security problem.
+
+00:27.628 --> 00:30.178
+How easy is it to crack these passwords?
+
+00:30.274 --> 00:32.722
+Well, with the Krakenator password,
+
+00:32.786 --> 00:36.274
+Steelmatron, aka this van,
+
+00:36.402 --> 00:40.066
+I can do it in seconds, which would give me access to any shared
+
+00:40.098 --> 00:43.382
+resources on your network, would allow me to use up your data limit,
+
+00:43.446 --> 00:47.034
+and would even allow me to engage in illegal activities that
+
+00:47.072 --> 00:50.346
+would ultimately be traced back to you. I'm going to show
+
+00:50.368 --> 00:53.662
+you how we built it. And I'm going to give you guys the tools to
+
+00:53.716 --> 00:57.246
+stop people like me. And today's video is brought to
+
+00:57.268 --> 01:00.750
+you by apost. LTT keycaps. Yes,
+
+01:00.820 --> 01:04.306
+they're real, and yes, you can get them right now. Check them out
+
+01:04.328 --> 01:08.082
+at the link down below where you can get free us shipping. Wi Fi
+
+01:08.136 --> 01:12.180
+security historically has been a bit lacking. In fact,
+
+01:14.230 --> 01:16.020
+I'm working on it.
+
+01:19.370 --> 01:22.882
+And if you're thinking that was a dramatic reenactment,
+
+01:22.946 --> 01:26.386
+surely it's not that bad. You're right, because it's worse
+
+01:26.418 --> 01:29.634
+than you think. Whether we get chased off or not doesn't
+
+01:29.682 --> 01:33.366
+even matter. We can grab everything we need from a target's
+
+01:33.398 --> 01:37.046
+network in the 30 seconds that it takes them to spot
+
+01:37.078 --> 01:40.558
+us outside their house and walk out to confront us. So if
+
+01:40.564 --> 01:43.998
+they're using any kind of phone number password, I should be able
+
+01:44.004 --> 01:47.646
+to break through it this
+
+01:47.828 --> 01:48.750
+easily.
+
+01:50.850 --> 01:54.800
+And done. That was it?
+
+01:55.570 --> 01:56.320
+Yes.
+
+01:59.110 --> 02:02.846
+While it may shock you to learn how easy it was to crack that network's
+
+02:02.878 --> 02:06.446
+password, it might also shock you to know that for the majority of Wi
+
+02:06.478 --> 02:09.334
+Fi's life, it's kind of been this way.
+
+02:09.532 --> 02:13.154
+Wep was the first generation of Wi Fi password
+
+02:13.202 --> 02:16.070
+protection to find widespread adoption. And at first,
+
+02:16.220 --> 02:19.606
+it was good enough, especially compared to the alternative of
+
+02:19.628 --> 02:21.834
+your data just raw dogging it through the air,
+
+02:21.872 --> 02:26.058
+unencrypted. But it took technology only a few years
+
+02:26.144 --> 02:29.754
+to advance to the point where WEP could be cracked in under a
+
+02:29.792 --> 02:33.250
+minute. The attack method was pretty straightforward.
+
+02:33.430 --> 02:36.970
+Every packet of data contained the password in some manner.
+
+02:37.050 --> 02:40.442
+So if enough packets could be intercepted, they could all be compared
+
+02:40.506 --> 02:44.114
+to find out what they had in common. This was the reason
+
+02:44.152 --> 02:48.146
+for the switch to WPA two, or wifi protected access,
+
+02:48.248 --> 02:51.134
+which ditched the constant sending of the password,
+
+02:51.262 --> 02:54.610
+simplifying the process down to a four part handshake.
+
+02:54.950 --> 02:57.958
+First, the device tells the router it wants to connect.
+
+02:58.124 --> 03:01.794
+Then the router sends back a challenge key. The device
+
+03:01.842 --> 03:05.106
+then mixes the challenge key with the password and returns
+
+03:05.138 --> 03:08.434
+it to the router. Finally, the router sends back a session
+
+03:08.482 --> 03:12.310
+key, and that gets used for the remainder of the time the device is connected.
+
+03:12.470 --> 03:16.054
+For an observer, then, this is kind of like having a picture
+
+03:16.102 --> 03:19.478
+of the lock and knowing that a standard looking key opens
+
+03:19.494 --> 03:22.906
+the lock, but having no idea what the exact shape of that
+
+03:22.928 --> 03:26.654
+key needs to be. Now, they could attempt to brute force it,
+
+03:26.692 --> 03:30.174
+but it would take forever, and they would risk detection because
+
+03:30.212 --> 03:33.466
+they would need to be in range of the lock at all times. This ended
+
+03:33.498 --> 03:37.170
+up being pretty effective for a while. But wait a minute.
+
+03:37.510 --> 03:41.346
+What if, instead of just knowing what the lock looks like,
+
+03:41.448 --> 03:44.782
+the hacker possessed a collection of exact replicas of the lock,
+
+03:44.846 --> 03:48.470
+allowing them to try key after key after key without detection?
+
+03:48.810 --> 03:51.878
+Well, that is exactly what we did.
+
+03:52.044 --> 03:55.010
+By stealing the complete handshake packet,
+
+03:55.090 --> 03:58.418
+we've obtained the challenge key and the result of mixing
+
+03:58.434 --> 04:01.994
+it with the password. Well, at that point, we can take
+
+04:02.032 --> 04:05.146
+that information to a safe location, brute force it with
+
+04:05.168 --> 04:08.870
+the power of our krakenator, and then return to do our shady
+
+04:08.950 --> 04:12.514
+business. Making things even simpler for nerdy wells,
+
+04:12.582 --> 04:15.786
+encryption cracking plays real nice with multiple cores,
+
+04:15.898 --> 04:19.742
+with each core of a processor hypothetically being able to try a different
+
+04:19.796 --> 04:23.690
+key in unison. And this might not mean that much for CPUs
+
+04:23.770 --> 04:26.530
+that have only a handful of cores, or at most, what,
+
+04:26.680 --> 04:29.922
+128? 192. Well,
+
+04:30.056 --> 04:33.662
+when it comes to GPUs, we are talking thousands
+
+04:33.726 --> 04:36.934
+of cores. So while we obviously could put
+
+04:36.972 --> 04:40.870
+hardware with this kind of password cracking capability into
+
+04:40.940 --> 04:44.822
+a mobile hacking station like this, we don't even need
+
+04:44.876 --> 04:48.478
+to. All right, let's finally properly meet the Camino Grando
+
+04:48.514 --> 04:52.298
+RM. Now, just so you remember, the RTX 40 90
+
+04:52.384 --> 04:55.930
+has 16,000 CUDA cores in it,
+
+04:56.080 --> 04:59.206
+and this has six of those. I haven't
+
+04:59.238 --> 05:02.598
+seen one of these for about two years. Every time Camino sends
+
+05:02.614 --> 05:06.346
+over a system, they are so nice. Actually, before I'm
+
+05:06.378 --> 05:10.254
+even in, I can see something that is a huge improvement over the last one.
+
+05:10.372 --> 05:13.562
+Previously, they were using SFXL power supplies,
+
+05:13.626 --> 05:16.926
+three of them, which is not the best if
+
+05:16.948 --> 05:20.494
+you want to have a server. This time, we have proper server grade power supplies,
+
+05:20.542 --> 05:23.698
+and there are four of them. So I am kind of curious if it will
+
+05:23.704 --> 05:26.830
+just keep on running if you take one of them out, maybe even two of
+
+05:26.840 --> 05:30.294
+them out. I have never seen a 40, 90, like this.
+
+05:30.332 --> 05:33.602
+This is strange. So, we have our power connectors
+
+05:33.666 --> 05:37.286
+right here, which are not connected to anything at
+
+05:37.308 --> 05:41.366
+all, because Camino have put power connectors on the back of these GPUs.
+
+05:41.478 --> 05:45.066
+I have seen some PCBs with the pads for
+
+05:45.088 --> 05:49.178
+these power connectors, but never anything actually installed like this.
+
+05:49.344 --> 05:52.422
+It looks like Camino has made their own custom PCB
+
+05:52.486 --> 05:56.334
+for twelve volt high power connectors right here. You can see that we have
+
+05:56.372 --> 05:59.966
+a couple extra, and if they wanted, they could have heaps absolute
+
+06:00.068 --> 06:03.662
+gobs and gobs of GPUs in this thing. I take it this computer
+
+06:03.716 --> 06:06.980
+is extraordinarily loud. Yes, very.
+
+06:08.710 --> 06:12.210
+That's loud. These run much quieter.
+
+06:13.110 --> 06:16.846
+Yeah, and they also can't run any AI workload worth a damn
+
+06:16.878 --> 06:19.678
+compared to this thing. They're quiet.
+
+06:19.774 --> 06:22.758
+In the past, Camino have had their servers set up so that you can kind
+
+06:22.764 --> 06:25.846
+of just put it in your office, and it would be fine. We'd have,
+
+06:25.868 --> 06:28.954
+like, Noctua fans set up here that blow across the power
+
+06:28.992 --> 06:32.042
+supplies and the radiator at the same time.
+
+06:32.096 --> 06:35.286
+This right here is clearly a lot more server grade
+
+06:35.318 --> 06:38.842
+with these absolutely chunktastic, cut your finger off
+
+06:38.896 --> 06:42.554
+fans right here. What hasn't changed, though, is how impressive
+
+06:42.602 --> 06:46.270
+their water cooling is. In here, we have a great big
+
+06:46.340 --> 06:50.154
+water cooling manifold that's distributing in parallel
+
+06:50.282 --> 06:53.786
+water to our CPU and all of our GPUs,
+
+06:53.898 --> 06:57.154
+and then is taking all of that heat and dumping it into this
+
+06:57.192 --> 07:00.706
+great big radiator with those massive fans. It looks
+
+07:00.728 --> 07:04.274
+like all of the water blocks are completely custom for Camino. We've got
+
+07:04.312 --> 07:07.670
+these beautiful GPU ones that are just nice and small.
+
+07:07.820 --> 07:11.362
+Look at how beautiful this BRM heatsink is over here. It's just machined
+
+07:11.426 --> 07:15.270
+out of copper. Everything in here is just absolutely beautiful.
+
+07:15.420 --> 07:18.566
+32GB, I think the last one that we had. All of
+
+07:18.588 --> 07:21.570
+them are 64, so not too much rAm.
+
+07:21.650 --> 07:25.130
+256 is still a lot, though. So, Tanner, have you done everything
+
+07:25.200 --> 07:28.726
+that you need to do with this for the video? Yeah. Have you tested
+
+07:28.758 --> 07:31.662
+the power supply redundancy? No.
+
+07:31.796 --> 07:34.320
+Should we? We can do that.
+
+07:37.650 --> 07:41.134
+All right, let's see if these power supplies are redundant. This is a very
+
+07:41.172 --> 07:43.860
+simple test. The computer is on.
+
+07:45.510 --> 07:48.820
+The computer is still on. Good job, guys.
+
+07:49.190 --> 07:52.802
+One thing that isn't very server like with this is the I O. We have
+
+07:52.856 --> 07:56.386
+heaps of USB ports right here. Normally on a server board, you only get,
+
+07:56.408 --> 08:00.002
+like, two. We also have 210 gigs and Intel AX
+
+08:00.066 --> 08:02.678
+200 Wifi, which will get you Wifi six,
+
+08:02.764 --> 08:06.022
+E and WPA three for that. Good, good.
+
+08:06.076 --> 08:09.666
+High security wifi. Yes. While hackers
+
+08:09.698 --> 08:13.450
+and crackers were working to defeat it. WPA was doing some
+
+08:13.520 --> 08:17.482
+leveling up of its own, and it's a pretty safe bet that any Wifi six
+
+08:17.536 --> 08:21.078
+device will be using WPA three encryption.
+
+08:21.254 --> 08:24.746
+What's changed? Well, the new Dragonfly handshake method
+
+08:24.778 --> 08:28.814
+aims to make it much more difficult to observe the handshake process and
+
+08:28.852 --> 08:33.498
+crack the password offline. But along with a few smaller vulnerabilities,
+
+08:33.594 --> 08:36.990
+it does have one major flaw that still persists.
+
+08:37.150 --> 08:41.006
+If your network contains any devices that were made before WPA
+
+08:41.038 --> 08:44.322
+three, or one of the few devices made after that
+
+08:44.376 --> 08:47.842
+that just doesn't support it. Like, say, for example, an HP
+
+08:47.906 --> 08:51.574
+printer, your router will fall back to WPA two
+
+08:51.612 --> 08:55.286
+for that device unless it is explicitly told not to.
+
+08:55.468 --> 08:57.640
+That is our entry point.
+
+08:59.310 --> 09:02.682
+Wow. Thanks, Linus. Yeah, no problem. See you later,
+
+09:02.736 --> 09:03.450
+buddy.
+
+09:06.510 --> 09:10.586
+Let's hope things go a little better with victim number two. About a week ago,
+
+09:10.688 --> 09:14.074
+I gave them an HP printer, and as long as they
+
+09:14.112 --> 09:17.678
+didn't get far enough in the setup process to realize HP requires them to have
+
+09:17.684 --> 09:21.342
+a subscription just to use the ink in the box, they're going to have that
+
+09:21.396 --> 09:25.026
+on their network. Doesn't that come with, like, a trial or something? Yeah, but I
+
+09:25.048 --> 09:28.158
+kept that for myself. What? I'm going to pay for my own printer subscription.
+
+09:28.254 --> 09:29.490
+I'm a hacker.
+
+09:32.870 --> 09:35.974
+Are you done? Yeah. Okay, got the handshake data. Let's go.
+
+09:36.012 --> 09:36.760
+Let's go.
+
+09:38.890 --> 09:42.534
+Okay, this is not going so well. And that's because even with
+
+09:42.572 --> 09:46.162
+our stolen lock, the cracking difficulty of one wifi password
+
+09:46.226 --> 09:49.160
+compared to the next can be dramatically different.
+
+09:49.610 --> 09:53.018
+A traditional lock and key might have only five or
+
+09:53.104 --> 09:57.190
+six values that differ, and five or six possible heights for the teeth.
+
+09:57.350 --> 10:00.906
+WPA passwords, by contrast, can use any of the printable
+
+10:00.938 --> 10:04.830
+ASCII characters and be up to 63 characters long.
+
+10:04.980 --> 10:08.522
+That means that the total number of different passwords that could exist
+
+10:08.586 --> 10:11.454
+is very high.
+
+10:11.652 --> 10:15.226
+Or at least it would be if people weren't so gosh
+
+10:15.258 --> 10:18.974
+darn predictable. When you are expected to share a password
+
+10:19.022 --> 10:22.386
+with others, you are much less likely to select one that looks like this.
+
+10:22.488 --> 10:25.778
+And you are much more likely to select one that looks like this.
+
+10:25.944 --> 10:29.126
+So, with a dictionary attack where a list of words is
+
+10:29.148 --> 10:33.042
+used instead of random strings of characters, hackers can drastically
+
+10:33.106 --> 10:36.822
+reduce the number of passwords that they need to attempt, down from 20
+
+10:36.956 --> 10:40.234
+quadrijintillion, apparently. Yes. That is a real
+
+10:40.272 --> 10:43.594
+number to only hundreds of millions, which might
+
+10:43.632 --> 10:47.574
+still sound like a lot until you consider that a single RTX
+
+10:47.622 --> 10:51.214
+40 90 can attempt over 2 million wpa two
+
+10:51.252 --> 10:55.182
+passwords per second. Let's tackle a pretty typical twelve
+
+10:55.236 --> 10:58.510
+character password, then with a number and a special character.
+
+11:00.370 --> 11:03.686
+And yeah, armed with only a dictionary
+
+11:03.738 --> 11:07.006
+of a million common words, combined with a mask of any non letter
+
+11:07.038 --> 11:10.478
+ASCII character, I can take down your super secure
+
+11:10.574 --> 11:14.690
+but still easy to say password in just seconds.
+
+11:15.270 --> 11:19.154
+All right then, Linus, if full sentence passphrases
+
+11:19.202 --> 11:23.394
+don't work, what do I do now? Well, you might try creating a password
+
+11:23.442 --> 11:27.042
+with a string of random upper and lowercase letters
+
+11:27.106 --> 11:30.986
+with numbers and punctuation, which is actually great in
+
+11:31.008 --> 11:34.794
+theory, but unfortunately, once again, people are
+
+11:34.832 --> 11:38.694
+predictable and they tend to do things like use mnemonic phrases
+
+11:38.742 --> 11:42.346
+for easier memorization. According to researchers at Carnegie
+
+11:42.378 --> 11:46.394
+Mellon, these phrases often tend to be based on popular media like Shakespeare,
+
+11:46.442 --> 11:50.410
+or more commonly apparently, the Oscar Meyer Wiener Jingle,
+
+11:50.490 --> 11:53.742
+making them susceptible to dictionary attacks. All the same,
+
+11:53.876 --> 11:57.406
+you could use a password generator to create a long string
+
+11:57.438 --> 12:01.406
+of truly random characters and then only share your wifi credentials
+
+12:01.438 --> 12:05.230
+through QR codes. This has the benefits of being both secure
+
+12:05.310 --> 12:08.718
+and easy to use in most scenarios, but it
+
+12:08.744 --> 12:11.954
+can be a huge pain as soon as you need to connect a device
+
+12:12.002 --> 12:15.366
+that doesn't happen to have a camera. Or at
+
+12:15.388 --> 12:18.594
+least it would be a huge pain if you allowed those devices
+
+12:18.642 --> 12:22.234
+on your network at all. As it turns out, you don't really have to
+
+12:22.272 --> 12:26.214
+if you just make a new network for obnoxious devices that compromise
+
+12:26.262 --> 12:29.482
+your security if all they need is Internet access,
+
+12:29.616 --> 12:32.894
+a really great and fairly noob friendly way to deal
+
+12:32.932 --> 12:36.670
+with this is to put them on your router's guest SSId.
+
+12:37.090 --> 12:41.338
+If they need more, though, then you might have to learn about VLans.
+
+12:41.514 --> 12:45.406
+Network security doesn't end at Wifi security, and Wifi
+
+12:45.438 --> 12:49.022
+security doesn't end at a strong password. Many routers
+
+12:49.086 --> 12:52.770
+do include an option to limit networks to WPA three only,
+
+12:52.920 --> 12:56.646
+and while this does break backwards compatibility with older or
+
+12:56.668 --> 13:00.514
+less secure devices, having a second WPA two network
+
+13:00.562 --> 13:04.626
+using a different password and with much stricter network
+
+13:04.658 --> 13:08.178
+access rules is a great option if you're willing
+
+13:08.194 --> 13:11.498
+to put in the time to learn about it. In fact, at that point,
+
+13:11.584 --> 13:14.966
+why stop at two networks? You could have one for your main devices,
+
+13:15.078 --> 13:18.486
+one for your iot devices, and then a limited guest network
+
+13:18.518 --> 13:22.686
+for your visitors. It's a great way to really improve your network security,
+
+13:22.868 --> 13:26.074
+usually without having to purchase any additional hardware.
+
+13:26.202 --> 13:30.698
+Just like this is a great way to segue to our sponsor Squarespace.
+
+13:30.794 --> 13:34.314
+Are you looking to create a website but lack the technical expertise?
+
+13:34.442 --> 13:37.506
+Squarespace is here to help their all in one platform
+
+13:37.608 --> 13:40.658
+simplifies the process of getting your website up and running quickly.
+
+13:40.744 --> 13:44.382
+With Squarespace, you can grow your business online through their marketing features,
+
+13:44.446 --> 13:48.142
+which include SEO support, email campaigns, and social tools.
+
+13:48.206 --> 13:51.794
+They offer a wide selection of award winning, mobile optimized templates,
+
+13:51.842 --> 13:55.970
+and their commerce platform provides everything you need, from merchandising to checkout.
+
+13:56.050 --> 13:59.970
+You can also access analytic insights to optimize your website's performance
+
+14:00.050 --> 14:04.054
+and identify areas that need improvement. If you require assistance, Squarespace has
+
+14:04.092 --> 14:08.566
+help guides and a 24/7 support team, so visit squarespace.com
+
+14:08.748 --> 14:12.554
+LTT to receive you 10% off your first purchase.
+
+14:12.682 --> 14:15.646
+If you guys enjoyed this video and you want a more detailed guide on how
+
+14:15.668 --> 14:19.134
+to improve your home network security, check out the time that I separated my
+
+14:19.172 --> 14:21.130
+main network from my iot devices.
