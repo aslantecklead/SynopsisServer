@@ -4,6 +4,7 @@ import assemblyai as aai
 
 subsReady = False
 
+
 def create_subtitles(video_code):
     global subsReady
     print("Starting subtitle creation process...")
