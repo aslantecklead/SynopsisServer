@@ -1,0 +1,2788 @@
+WEBVTT
+
+00:00.640 --> 00:04.430
+Telegram is one of the fastest growing and biggest social
+
+00:04.502 --> 00:07.662
+messaging apps, text apps in the world,
+
+00:07.838 --> 00:11.510
+popular all around the world, including in the United States. But almost nothing,
+
+00:11.542 --> 00:14.630
+or very little seems to be known about the company.
+
+00:14.742 --> 00:18.414
+It's headquartered in Dubai, where we are now. It is run
+
+00:18.494 --> 00:22.558
+and owned, and the software is designed, written by Pavel
+
+00:22.606 --> 00:26.254
+Dharov, who began it some years ago, who almost
+
+00:26.294 --> 00:29.706
+never does interviews. It turns out he's in a very interesting person,
+
+00:29.770 --> 00:32.922
+extremely interesting person. We learned that the other day while talking to
+
+00:32.938 --> 00:36.370
+him, and he has agreed to sit down and tell us about himself and his
+
+00:36.402 --> 00:39.306
+company. And we thought it'd be definitely worth hearing. And with that,
+
+00:39.370 --> 00:43.050
+Pavel, thank you for joining us. Well, thank you for having me. So,
+
+00:43.242 --> 00:46.858
+I confess I used telegram. I didn't know anything
+
+00:46.906 --> 00:49.978
+about you or the company, and I was just kind of amazed by your story.
+
+00:50.026 --> 00:53.668
+And if you wouldn't mind just recreating it a little bit for our audience.
+
+00:53.826 --> 00:56.524
+Where are you from? How did you start this and why?
+
+00:57.344 --> 01:00.648
+That would be a long story. That's okay. I was born in
+
+01:00.696 --> 01:04.176
+1984 in the Soviet Union, so it was a fun year
+
+01:04.200 --> 01:07.832
+to be born in. And back then, I could
+
+01:07.888 --> 01:11.696
+witness the deficiencies of the centralized system
+
+01:11.760 --> 01:14.912
+we had in the Soviet Union. When I was four years old, my family
+
+01:14.968 --> 01:18.616
+moved to Italy, where I could compare what I saw in touring Italy
+
+01:18.680 --> 01:22.544
+with what I experienced in the Soviet Union. And I thought
+
+01:22.964 --> 01:26.276
+the capitalist system, the free market system,
+
+01:26.460 --> 01:28.784
+is definitely better, at least for me.
+
+01:30.284 --> 01:34.052
+I went to school in Italy. I became sort
+
+01:34.068 --> 01:37.772
+of a part of the European as a
+
+01:37.788 --> 01:40.904
+result. But then when the Soviet Union collapsed,
+
+01:41.324 --> 01:44.704
+we decided to move back to Russia.
+
+01:46.024 --> 01:49.256
+In Italy, though, me and my
+
+01:49.280 --> 01:52.364
+brother, we had a lot of fun time.
+
+01:53.224 --> 01:58.048
+He was shown live on italian tv as a young
+
+01:58.136 --> 02:01.976
+prodigy kid who could solve cubic equations in
+
+02:02.120 --> 02:05.712
+real time. Being just ten years old,
+
+02:05.808 --> 02:09.064
+and that was considered to be impossible back
+
+02:09.104 --> 02:11.920
+then. In Italy, I don't know what a cubic equation is. So, yeah, it sounds
+
+02:11.952 --> 02:15.776
+difficult, definitely. And when I first went
+
+02:15.800 --> 02:18.976
+to school in Italy, I didn't know how to speak Italian. I didn't know
+
+02:19.000 --> 02:22.640
+a single italian word. And a lot of teachers said, this guy,
+
+02:22.712 --> 02:26.232
+well, this kid will not going to be successful
+
+02:26.288 --> 02:29.128
+in our school. By the end of the first year, I was second best.
+
+02:29.176 --> 02:32.336
+By the end of this next year, I was the
+
+02:32.400 --> 02:36.480
+best student in our class. So it also showed me
+
+02:36.512 --> 02:39.952
+that, well, you could excel, you could compete.
+
+02:40.008 --> 02:43.500
+I liked that competitive environment. And then
+
+02:43.612 --> 02:47.104
+when we got back to Russia, it was a little bit chaotic.
+
+02:47.604 --> 02:51.204
+The only reason we got back is my father got an offer
+
+02:51.324 --> 02:54.580
+to run one of the departments in the St. Petersburg State University.
+
+02:54.692 --> 02:58.144
+He's one of the famous scholars and writers
+
+02:59.524 --> 03:03.844
+dealing with ancient roman literature. And that
+
+03:03.884 --> 03:07.476
+experience was very different, and I still enjoyed
+
+03:07.500 --> 03:11.900
+it, because in Russia in the nineties, you had these experimental schools
+
+03:12.052 --> 03:16.220
+where you were taught
+
+03:16.292 --> 03:20.244
+everything. Like, we had six foreign languages, we had math,
+
+03:20.364 --> 03:23.460
+like, very specialized. Six foreign languages at once, six foreign
+
+03:23.492 --> 03:27.292
+languages. In parallel, you would have math similar
+
+03:27.468 --> 03:31.340
+that you would have in specialized math schools and chemistry
+
+03:31.452 --> 03:35.756
+at the same level you would have at schools specialized in chemistry and biology.
+
+03:35.860 --> 03:39.452
+So that was really intense. My brother,
+
+03:39.548 --> 03:43.012
+he became world champion in maths,
+
+03:43.068 --> 03:47.404
+in international Olympiads, in maths and programming many
+
+03:47.444 --> 03:50.556
+times in the world. Absolute best.
+
+03:50.700 --> 03:53.500
+Myself, I was just the best student at my school.
+
+03:53.692 --> 03:57.404
+Also did some victories
+
+03:57.484 --> 04:00.668
+in local competitions in several areas.
+
+04:00.796 --> 04:04.254
+But we both were very passionate about coding
+
+04:04.444 --> 04:08.058
+and designing stuff. And because
+
+04:08.106 --> 04:12.114
+we brought this IBM PC XT
+
+04:12.154 --> 04:15.722
+computer from Italy back in the early nineties, we were one of
+
+04:15.738 --> 04:19.294
+the few families in Russia who could actually
+
+04:20.874 --> 04:24.794
+teach ourselves how to program, and we
+
+04:24.834 --> 04:28.578
+started to do that. I was in the university. I was
+
+04:28.666 --> 04:31.574
+building websites for my fellow students,
+
+04:32.344 --> 04:36.684
+and as a result, I started
+
+04:37.264 --> 04:40.824
+a company that became what they called the Facebook of Russia.
+
+04:40.944 --> 04:44.484
+We don't like to name it that way because
+
+04:45.904 --> 04:49.608
+we actually managed to do a lot of things before Facebook,
+
+04:49.696 --> 04:55.448
+and that defined how the social media industry
+
+04:55.616 --> 04:58.896
+developed in the years to come. The company's name was VK.
+
+04:58.960 --> 05:03.068
+I started it when I was 21 years old. I just graduated
+
+05:03.196 --> 05:06.460
+university, and it eventually
+
+05:06.532 --> 05:10.388
+became the largest social network, the most popular
+
+05:10.436 --> 05:13.652
+social network in Russia, Ukraine, Belorussia, Kazakhstan, and a bunch
+
+05:13.668 --> 05:17.460
+of other post soviet countries. That was
+
+05:17.572 --> 05:21.276
+a significant effort on my side because I,
+
+05:21.340 --> 05:25.076
+at a certain point, was the sole employee
+
+05:25.140 --> 05:28.876
+of the company. I would write the code myself, I would do
+
+05:28.900 --> 05:32.948
+the design myself, I would manage the servers myself.
+
+05:33.036 --> 05:36.900
+It was quite intense. I even responded to customer
+
+05:36.972 --> 05:40.784
+support requests. Barely slept. But that was
+
+05:41.284 --> 05:44.224
+a fun time when I was 21, 22 years old.
+
+05:44.724 --> 05:48.444
+And then the company grew, like I said, to somewhere about
+
+05:48.604 --> 05:52.004
+100 million active users, which was a lot back
+
+05:52.044 --> 05:54.992
+then. It was, I think,
+
+05:55.048 --> 05:58.840
+2012 or 2011
+
+05:58.912 --> 06:02.464
+when we faced our first issues
+
+06:02.624 --> 06:06.208
+in Russia. Because, you see, I was
+
+06:06.256 --> 06:10.244
+still a big believer in these values of free market
+
+06:10.664 --> 06:14.352
+freedoms, freedom of speech, freedom of assembly. So when
+
+06:14.448 --> 06:18.376
+the russian opposition started to use BK to organize
+
+06:18.440 --> 06:22.394
+large protests in Russia, where, like, almost half a million people
+
+06:22.934 --> 06:26.446
+would go and protest on the main square or some
+
+06:26.470 --> 06:30.422
+of the main squares of the city, we were requested to
+
+06:30.478 --> 06:33.782
+ban these communities on BK by
+
+06:33.798 --> 06:37.662
+the government, and I refused. So the
+
+06:37.678 --> 06:41.594
+government asked you to shut down communications between their
+
+06:42.454 --> 06:45.910
+opponents? Well, VK is a social networking platform. So they
+
+06:45.942 --> 06:49.984
+have this large public communities that anybody can
+
+06:50.104 --> 06:53.592
+join, anybody can read what people
+
+06:53.648 --> 06:56.824
+are discussing or what the administrators are posting.
+
+06:56.984 --> 07:00.288
+They can comment, they can share. So it was a tool
+
+07:00.376 --> 07:03.160
+for these protesters to organize themselves.
+
+07:03.312 --> 07:07.320
+Back then. It wasn't about us siding with one
+
+07:07.352 --> 07:10.808
+part of the political fight
+
+07:10.856 --> 07:14.436
+or the other. It was us defending the freedom of
+
+07:14.460 --> 07:17.684
+speech and the freedom of assembly, which we believed was the right
+
+07:17.724 --> 07:21.220
+thing. But that didn't go too
+
+07:21.252 --> 07:24.804
+well with the government, and they were
+
+07:24.844 --> 07:28.868
+not too happy about that, I would say. And in a few years from then,
+
+07:28.956 --> 07:32.404
+in 2013, we had a similar situation
+
+07:32.564 --> 07:36.228
+where you had these protests in
+
+07:36.276 --> 07:39.420
+Ukraine where people, again, would use
+
+07:39.452 --> 07:43.080
+VK to organize themselves, go to the main
+
+07:43.112 --> 07:47.344
+square of the city and show their disagreement
+
+07:47.464 --> 07:51.544
+with the government. Yes. And we received a
+
+07:51.664 --> 07:55.392
+request, demand from the russian side saying,
+
+07:55.448 --> 07:58.840
+you have to give us the private data of
+
+07:58.872 --> 08:01.684
+the organizers of this protest.
+
+08:02.144 --> 08:06.004
+And our response was, wait a minute. This is a different country.
+
+08:07.324 --> 08:10.964
+Won't betray our ukrainian users. Because you asked us
+
+08:11.004 --> 08:14.884
+to do that. We decided to refuse. And that
+
+08:14.964 --> 08:18.108
+didn't go too well with the russian government as well.
+
+08:18.156 --> 08:22.940
+So at the end of that year, I had to make a difficult
+
+08:23.052 --> 08:26.684
+decision because I was offered basically a choice
+
+08:26.764 --> 08:29.944
+between two suboptimal options,
+
+08:31.124 --> 08:34.484
+one of which was I would start complying
+
+08:34.604 --> 08:37.836
+to whatever the leaders of the country told
+
+08:37.860 --> 08:43.404
+me to do. The other one was I could sell
+
+08:43.444 --> 08:47.532
+my stake in the company, retire, resign as the
+
+08:47.548 --> 08:49.824
+CEO, and leave the country.
+
+08:51.844 --> 08:55.724
+I chose the letter. If I
+
+08:56.224 --> 08:59.092
+can just ask you to pause. It's a little strange because I have heard people
+
+08:59.148 --> 09:02.664
+say that telegram is a part of the russian government,
+
+09:03.164 --> 09:06.716
+and you're describing the opposite. You're saying you had to leave the country because you
+
+09:06.740 --> 09:09.508
+wouldn't bow to their demands. Well,
+
+09:09.676 --> 09:13.084
+exactly like you're saying, people who have very limited
+
+09:13.164 --> 09:16.852
+knowledge of where telegram came from,
+
+09:17.028 --> 09:21.268
+they would make these claims. They could be encouraged
+
+09:21.316 --> 09:24.940
+by our competitors, who see it as an easy way to discredit us
+
+09:24.972 --> 09:28.334
+because telegram is spreading like forest fire.
+
+09:28.634 --> 09:32.338
+Two and a half million users sign up every day, and we're sort
+
+09:32.346 --> 09:36.162
+of a threat. So I'm not surprised there's this perception
+
+09:36.338 --> 09:39.898
+because our competitors spend tens of billions on marketing,
+
+09:40.026 --> 09:43.706
+and they're known for using PR
+
+09:43.770 --> 09:46.986
+firms to also engage in
+
+09:47.010 --> 09:50.466
+campaigns like that. So how much do you spend on marketing?
+
+09:50.610 --> 09:53.538
+Zero. $0 in dollars.
+
+09:53.626 --> 09:56.712
+$0? We've never spent anything
+
+09:56.848 --> 10:00.608
+on acquiring users for marketing purposes.
+
+10:00.656 --> 10:05.320
+We never promoted telegram on
+
+10:05.352 --> 10:09.604
+other social platforms in any way. This is very different from
+
+10:10.424 --> 10:14.564
+other apps. You could see them being promoted here or there.
+
+10:15.104 --> 10:18.664
+Telegram is different. All of our growth is purely organic,
+
+10:18.824 --> 10:22.648
+and we got to almost 900
+
+10:22.696 --> 10:27.416
+million users without having
+
+10:27.480 --> 10:30.640
+to spend anything on ads
+
+10:30.672 --> 10:33.288
+to promote telegram. Amazing. I'm sorry to interrupt your.
+
+10:33.336 --> 10:36.680
+No, it's just interesting, because I have heard people say that,
+
+10:36.832 --> 10:40.312
+but it sounds like the opposite of the truth. So you decided
+
+10:40.368 --> 10:43.524
+to sell the company, resign as CEO and leave your country.
+
+10:44.424 --> 10:48.728
+Yes, that's what I did. It was a bit painful because obviously
+
+10:48.776 --> 10:52.272
+my first company was my baby. I created myself. There was a
+
+10:52.288 --> 10:55.736
+lot of creativity, time and effort invested
+
+10:55.840 --> 10:59.164
+in that platform. But at the same time,
+
+10:59.904 --> 11:02.960
+you know, I understood that I would rather be free.
+
+11:03.032 --> 11:05.872
+I would want to take orders from anyone.
+
+11:06.048 --> 11:09.552
+And I left behind probably a comfortable
+
+11:09.608 --> 11:12.968
+life, but for me, it was
+
+11:13.016 --> 11:16.848
+never about becoming rich. For me,
+
+11:16.936 --> 11:22.132
+everything in my life was about becoming free. And to
+
+11:22.148 --> 11:26.012
+the extent it is possible, my mission in life was to
+
+11:26.028 --> 11:29.424
+allow other people to also become free. In a sense,
+
+11:29.724 --> 11:33.220
+and using the platforms that we created
+
+11:33.252 --> 11:36.700
+or I created, my hope was that
+
+11:36.812 --> 11:38.944
+they could express their freedoms.
+
+11:40.524 --> 11:43.812
+This is the mission of Telegram, and it was also,
+
+11:43.988 --> 11:46.344
+in part, the mission of my previous company.
+
+11:47.384 --> 11:50.728
+We wanted to pause this interview just for a minute to point something out.
+
+11:50.896 --> 11:54.144
+When the russian government asked Pavel Durov to use his
+
+11:54.184 --> 11:57.672
+social media company to censor its political opponents, he refused.
+
+11:57.728 --> 12:01.248
+He said he would rather resign and leave the country where he was
+
+12:01.296 --> 12:04.120
+born than participate in something like that.
+
+12:04.192 --> 12:08.064
+Such was his commitment to free speech. Now, you got to compare that
+
+12:08.144 --> 12:12.192
+what he did, what Pavel Durov did to what Mark Zuckerberg did, or Prague
+
+12:12.248 --> 12:15.554
+Agarwal, the guy who ran Twitter before Elon Musk bought it.
+
+12:15.744 --> 12:19.710
+Both of them have collaborated with governments to
+
+12:19.742 --> 12:22.314
+censor people, and that's shameful.
+
+12:22.694 --> 12:26.190
+So we believe Pavel when he says that his
+
+12:26.222 --> 12:29.422
+app, Telegram, will be a bastion of free speech, because it has been, and we
+
+12:29.438 --> 12:32.710
+believe him because he's shown how committed to that he is.
+
+12:32.742 --> 12:36.318
+So we've decided that we're going to launch with pride our own Telegram
+
+12:36.366 --> 12:39.646
+channel to give one more avenue to reach people with our content,
+
+12:39.750 --> 12:42.998
+free from censorship. So if you're on Telegram, we ask that
+
+12:43.006 --> 12:46.798
+you subscribe to our new channel by searching for a username
+
+12:46.886 --> 12:50.318
+listed below. We're honored to be doing this. We're going to
+
+12:50.326 --> 12:54.134
+get back to our conversation with Pavel Durov. So you start telegram
+
+12:54.174 --> 12:58.510
+after you leave Russia, correct? Yeah. So the idea for telegram
+
+12:58.622 --> 13:02.750
+came when we were still based in Russia, because at
+
+13:02.782 --> 13:08.002
+some point we had this very
+
+13:08.098 --> 13:11.962
+stressful situation where armed policemen would
+
+13:12.018 --> 13:16.170
+come to my house, tried to break in,
+
+13:16.322 --> 13:19.970
+because I refused to take down these opposition groups that
+
+13:20.002 --> 13:23.506
+I mentioned earlier. And I realized there is no
+
+13:23.570 --> 13:26.730
+secure means of communication. I realized I want to tell
+
+13:26.762 --> 13:30.186
+my brother what's going on. To coordinate whatever we
+
+13:30.210 --> 13:33.908
+want to do. Every tool
+
+13:34.036 --> 13:37.332
+to communicate I could use was not
+
+13:37.428 --> 13:40.996
+really secure, not encrypted. It was not safe to use
+
+13:41.020 --> 13:44.788
+them. So I thought, hmm, it could be a good idea to actually
+
+13:44.916 --> 13:49.304
+come up with a decently encrypted messaging app.
+
+13:49.964 --> 13:53.228
+And my brother, being the genius that he is, he was
+
+13:53.396 --> 13:56.812
+able to create this encryption standard that we are
+
+13:56.868 --> 13:59.654
+using up until this day with minor changes.
+
+14:00.194 --> 14:02.674
+But then your brother wrote the encryption?
+
+14:02.794 --> 14:06.162
+Yes, well, my brother, like, two phds in maths,
+
+14:06.258 --> 14:07.334
+super smart.
+
+14:09.314 --> 14:13.214
+He's an expert in cryptography. He designed
+
+14:13.754 --> 14:16.922
+the basic principles of the telegram encryption.
+
+14:17.098 --> 14:20.894
+I was more on the user interface side,
+
+14:21.194 --> 14:23.754
+the way how the app works, the features,
+
+14:23.794 --> 14:27.710
+etcetera. He was responsible for the encryption
+
+14:27.742 --> 14:31.554
+side. So where did you go when you left Russia?
+
+14:32.814 --> 14:35.754
+We tried several places. We first went to Berlin.
+
+14:36.374 --> 14:39.782
+We tried to set up a company in Berlin. We then
+
+14:39.838 --> 14:43.142
+tried London, Singapore, San Francisco,
+
+14:43.278 --> 14:47.030
+you name it. We've been everywhere. Why didn't you stay
+
+14:47.102 --> 14:50.654
+in any of those places? Oh, because the bureaucratic
+
+14:50.694 --> 14:53.780
+hurdles were just too
+
+14:53.852 --> 14:57.420
+difficult to overcome. I was bringing the best
+
+14:57.492 --> 15:01.308
+in class programmers in the world to these places,
+
+15:01.396 --> 15:06.420
+and I was trying to hire them from
+
+15:06.492 --> 15:09.924
+a local company. And the response I got in places
+
+15:09.964 --> 15:13.172
+like Germany, for example, is that, no, no, no. You can't
+
+15:13.228 --> 15:16.756
+hire people from outside of the European Union,
+
+15:16.940 --> 15:20.212
+because you should first run some newspaper ad in
+
+15:20.228 --> 15:22.808
+the local magazine,
+
+15:22.856 --> 15:26.736
+whatever, and then for six months, nobody responds
+
+15:26.800 --> 15:30.160
+from engineers that are available inside
+
+15:30.232 --> 15:34.016
+the European Union and Germany. Then you're allowed to hire
+
+15:34.080 --> 15:37.688
+outsiders. And I thought it was a crazy idea,
+
+15:37.736 --> 15:40.684
+because. Why didn't you just say they were illiterate refugees?
+
+15:42.744 --> 15:46.968
+Well, because we didn't consider ourselves refugees. We were very
+
+15:47.096 --> 15:50.378
+successful people. We could have gone anywhere.
+
+15:50.506 --> 15:53.402
+No, but if you told them you were illiterate refugees,
+
+15:53.458 --> 15:54.574
+they would let you stay.
+
+15:56.594 --> 16:00.714
+Yeah. So you go from Germany
+
+16:00.794 --> 16:04.650
+to Singapore to London to San Francisco. What happened in San Francisco?
+
+16:04.802 --> 16:08.490
+In San Francisco, we really thought it
+
+16:08.522 --> 16:11.762
+would be the place for us to be in, because all
+
+16:11.778 --> 16:15.094
+the tech companies are there or around San Francisco,
+
+16:15.474 --> 16:19.674
+and there are two things that happened that made
+
+16:19.714 --> 16:22.530
+us think twice. Well,
+
+16:22.602 --> 16:25.866
+one thing is pretty obvious. I was in San Francisco.
+
+16:26.010 --> 16:29.894
+I got attacked on the street after visiting,
+
+16:31.674 --> 16:35.034
+I think it was Jack Dorsey in Twitter,
+
+16:35.114 --> 16:38.442
+in the Twitter's office. And I was walking
+
+16:38.498 --> 16:42.202
+back at 08:00 p.m. To my hotel, and I got attacked in
+
+16:42.218 --> 16:46.302
+the street. This is the only country where I
+
+16:46.398 --> 16:50.334
+got attacked on the streets. What happened just three big
+
+16:50.374 --> 16:54.434
+guys tried to grab my phone from my hands. I was tweeting
+
+16:54.974 --> 16:58.278
+about the fact that I just met the founder of Twitter.
+
+16:58.366 --> 17:01.830
+That seemed like a right idea for me back
+
+17:01.862 --> 17:05.710
+then to do. And I got attacked. I didn't
+
+17:05.742 --> 17:08.034
+want to let them have my phone.
+
+17:08.954 --> 17:12.414
+They probably didn't expect resistance.
+
+17:12.954 --> 17:16.186
+So I snatched my phone back. There was a short fight with
+
+17:16.210 --> 17:20.226
+the guys. There was a little bit blood involved, but I managed
+
+17:20.250 --> 17:23.522
+to run away and decided
+
+17:23.578 --> 17:26.746
+I should probably. They probably don't mug a lot of Russians. They might have been
+
+17:26.770 --> 17:31.194
+surprised. Well, they were much taller than me, I must admit,
+
+17:31.274 --> 17:35.132
+and there are three of them, but I think I put
+
+17:35.148 --> 17:38.236
+up a good fight. Were you surprised that this happened in San Francisco?
+
+17:38.300 --> 17:41.532
+Completely. Yeah. It was a shock to me
+
+17:41.588 --> 17:45.804
+because I traveled a lot. That was the first place
+
+17:45.964 --> 17:48.876
+I got attacked. And I thought, all right,
+
+17:49.020 --> 17:52.276
+maybe we shouldn't look at San
+
+17:52.300 --> 17:55.932
+Francisco. Maybe there are other places in America where. Where you
+
+17:55.948 --> 17:58.144
+don't get attacked. Yeah, exactly.
+
+17:59.404 --> 18:02.496
+But there's this second part,
+
+18:02.560 --> 18:06.244
+which was probably more alarming there in the US,
+
+18:07.144 --> 18:11.472
+we got too much attention from the FBI,
+
+18:11.568 --> 18:14.644
+the security agencies, wherever we came to the US.
+
+18:15.104 --> 18:19.684
+So to give you an example, last time I was in the US, I brought
+
+18:19.984 --> 18:23.328
+an engineer that is working for Telegram,
+
+18:23.456 --> 18:26.804
+and there was an attempt to secretly hire
+
+18:27.194 --> 18:30.930
+my engineer behind my back by cybersecurity
+
+18:31.082 --> 18:34.418
+officers or agents, wherever they are called. The US
+
+18:34.466 --> 18:37.594
+government tried to hire your engineer? That's my understanding.
+
+18:37.634 --> 18:40.914
+That's what he told me. To write code for them or to
+
+18:41.074 --> 18:45.666
+break into telegram. They were curious to learn which
+
+18:45.810 --> 18:49.946
+open source libraries are integrated to the telegram's app
+
+18:50.130 --> 18:53.992
+on the client side. And there were trying to
+
+18:54.168 --> 18:57.928
+persuade him to use certain open source tools
+
+18:58.056 --> 19:01.896
+that he would then integrate into the telegram's code.
+
+19:02.040 --> 19:05.640
+That, in my understanding, would serve as backdoors,
+
+19:05.792 --> 19:09.480
+would allow the US government to spy on people who use telegram,
+
+19:09.592 --> 19:12.736
+the US government, or maybe any other government, because a
+
+19:12.760 --> 19:16.404
+backdoor is a backdoor, regardless of who is using it. That's right.
+
+19:18.754 --> 19:22.454
+That's a little surprising to hear. Maybe it's not surprising, it's offensive.
+
+19:23.474 --> 19:27.434
+You're confident that happened? Yes. There is
+
+19:27.474 --> 19:30.970
+no reason for my engineer to make up the stories.
+
+19:31.122 --> 19:34.454
+Also because I personally experienced similar
+
+19:35.394 --> 19:38.586
+pressure in the US. Whenever I would go to the US,
+
+19:38.650 --> 19:42.050
+I would have two FBI agents greeting me at the
+
+19:42.082 --> 19:47.100
+airport, asking questions. One time I was having
+
+19:47.132 --> 19:51.436
+my breakfast like 09:00 a.m. And the
+
+19:51.460 --> 19:55.332
+FBI showed up at my house that I was renting.
+
+19:55.508 --> 19:58.868
+And that was quite surprising. And I thought,
+
+19:58.996 --> 20:01.624
+we are getting too much attention here.
+
+20:02.204 --> 20:05.236
+It's probably not the best environment to run.
+
+20:05.380 --> 20:09.060
+Why would the. Had you committed a crime? No. They were
+
+20:09.132 --> 20:13.490
+interested to learn more about telegram. They knew I
+
+20:13.682 --> 20:17.414
+left Russia, they knew what we were
+
+20:18.274 --> 20:21.986
+doing, but they wanted details. And my understanding
+
+20:22.130 --> 20:25.254
+is that they wanted to establish a relationship to,
+
+20:26.394 --> 20:29.134
+in a way, control telegram better.
+
+20:29.834 --> 20:33.386
+I understand that they were doing their job. It's just that for
+
+20:33.450 --> 20:37.524
+us, running a privacy focused social media platform,
+
+20:37.674 --> 20:41.088
+that probably wasn't the best environment to be. And we want to
+
+20:41.096 --> 20:45.024
+be focused on what we do, not on government
+
+20:45.104 --> 20:48.004
+relations of that sort. Government relations.
+
+20:49.424 --> 20:53.040
+So then you came to UAE, to Dubai? Yes.
+
+20:53.192 --> 20:56.552
+Seven years ago we moved here.
+
+20:56.728 --> 21:00.320
+We first wanted just to try it for half
+
+21:00.352 --> 21:03.762
+a year, see if it works out. And it turned out to
+
+21:03.778 --> 21:07.922
+be a great place. We never looked back and
+
+21:07.978 --> 21:11.330
+we never wanted to change the UE for any other
+
+21:11.362 --> 21:14.706
+place after that. Why? For a number of
+
+21:14.730 --> 21:19.090
+reasons. First, the ease of doing business here is so
+
+21:19.122 --> 21:22.970
+high. For example, you can hire people from anywhere in the world as
+
+21:23.002 --> 21:26.974
+long as you're paying them a good salary. The residence permits
+
+21:27.674 --> 21:31.130
+granted automatically. It's very different if you try to do that
+
+21:31.202 --> 21:34.306
+in Europe and some other countries. It's very different from them.
+
+21:34.450 --> 21:36.734
+Second, it's very tax efficient.
+
+21:37.314 --> 21:41.694
+Third, the infrastructure is great. You get a lot for
+
+21:43.074 --> 21:45.454
+the minimum amount of taxes you're paying,
+
+21:46.354 --> 21:49.226
+the roads, the airports, the hotels,
+
+21:49.410 --> 21:53.402
+everything. I think you witnessed it yourself. Yes, but I
+
+21:53.418 --> 21:56.674
+think more importantly is that it's a neutral place. It's a neutral country.
+
+21:56.714 --> 21:59.174
+It's a small country that wants to be friends,
+
+21:59.914 --> 22:04.330
+friends with everybody. It's not aligned
+
+22:04.522 --> 22:08.810
+geopolitically with any of the big superpowers.
+
+22:08.962 --> 22:12.914
+And I think it's the best place for a neutral platform
+
+22:12.994 --> 22:16.850
+like ours to be in if we want to make sure we can defend
+
+22:16.882 --> 22:20.242
+our users privacy and freedom of speech. So in the time
+
+22:20.258 --> 22:24.586
+that you've been here, there have been a number of wars and
+
+22:24.730 --> 22:27.054
+threats of war, precursors to war.
+
+22:29.154 --> 22:32.586
+Have you had any pressure from the government here, honestly, any pressure from the
+
+22:32.610 --> 22:36.026
+government here to reveal a backdoor
+
+22:36.090 --> 22:40.114
+into telegram or to ban anyone or to make any changes to your business?
+
+22:40.274 --> 22:44.546
+Zero. That's the best part. For all
+
+22:44.570 --> 22:47.634
+the seven years we've been here, there's been
+
+22:47.674 --> 22:51.514
+zero pressure coming from the UAE towards telegram. They've been very
+
+22:51.554 --> 22:55.254
+supportive, very helpful, and it's a big contrast from
+
+22:55.754 --> 22:59.226
+whatever we've experienced before. What about what
+
+22:59.250 --> 23:02.914
+you've experienced since. Since you moved here in those seven years, have you come under
+
+23:02.954 --> 23:06.082
+pressure from other governments under whose jurisdiction
+
+23:06.138 --> 23:09.934
+you don't fall, but to accommodate their demands?
+
+23:10.674 --> 23:14.802
+Well, of course. Well, telegram is a large platform.
+
+23:14.938 --> 23:20.554
+We are popular in many, many countries, and we've
+
+23:21.534 --> 23:25.254
+been receiving a lot of requests. Demands.
+
+23:25.334 --> 23:27.274
+Some of them were legitimate.
+
+23:28.854 --> 23:32.470
+There was a group of people who was promoting violence.
+
+23:32.542 --> 23:36.686
+There was terrorist activity that was spreading
+
+23:36.710 --> 23:42.274
+violence in some parts of the world, publicly posting
+
+23:42.854 --> 23:46.800
+things that any decent human being would disallow or
+
+23:46.832 --> 23:50.128
+wouldn't want to be posted. We would help them
+
+23:50.296 --> 23:53.784
+in some other cases where we thought it would be
+
+23:53.824 --> 23:57.936
+crossing the line. It wouldn't be in
+
+23:57.960 --> 24:02.720
+line with our values of freedom of speech and protecting people's
+
+24:02.872 --> 24:07.096
+private correspondence. We would ignore those.
+
+24:07.200 --> 24:10.960
+Can you give us an example of a request that you thought crossed
+
+24:10.992 --> 24:14.140
+into censorship and spying, violating people's
+
+24:14.172 --> 24:17.740
+privacy? Well, there's,
+
+24:17.932 --> 24:21.664
+I would say, a very funny story related to your home country.
+
+24:22.444 --> 24:25.664
+After the events of January 6,
+
+24:26.444 --> 24:30.244
+we received a letter from, I believe,
+
+24:30.404 --> 24:33.824
+congressmen of the democratic side,
+
+24:34.564 --> 24:38.340
+and they requested that we would share
+
+24:38.412 --> 24:41.890
+all the data we had in relation to what they
+
+24:41.922 --> 24:43.974
+called this uprising.
+
+24:45.674 --> 24:49.362
+And we checked it with our lawyers and they said,
+
+24:49.538 --> 24:53.014
+you better ignore it. But the letter seemed very serious.
+
+24:53.794 --> 24:57.534
+And the letter said, if you fail
+
+24:57.954 --> 25:01.570
+to comply with this request, you will be in violation
+
+25:01.642 --> 25:04.938
+with the US Constitution
+
+25:05.026 --> 25:08.876
+or something. So they wanted data on people who
+
+25:08.900 --> 25:12.124
+voted for the other guy in the election. Well,
+
+25:12.164 --> 25:15.796
+they wanted the data of people who were demonstrating
+
+25:15.980 --> 25:18.824
+in Washington or wherever they were doing.
+
+25:20.324 --> 25:24.384
+You're probably right. I'm not an expert in the US politics.
+
+25:26.084 --> 25:29.604
+What was funny about it is two years,
+
+25:29.644 --> 25:33.210
+exactly two weeks after that letter, we got
+
+25:33.282 --> 25:37.058
+another letter, a new letter from the republican
+
+25:37.106 --> 25:39.854
+side of the Congress.
+
+25:40.314 --> 25:44.534
+And there we read that if we
+
+25:45.194 --> 25:48.954
+give out any data according to the previous
+
+25:49.034 --> 25:52.654
+request, we would be in violation of the US Constitution.
+
+25:52.994 --> 25:56.706
+So we got two letters that
+
+25:56.810 --> 26:00.282
+said, whatever we do, we'll be violating the
+
+26:00.298 --> 26:04.098
+US Constitution. In a way, that was my understanding of
+
+26:04.226 --> 26:07.402
+these letters from the same legislative body,
+
+26:07.458 --> 26:10.946
+both from the US Congress. Yes. So how do you respond to
+
+26:10.970 --> 26:12.934
+that? Well,
+
+26:15.114 --> 26:19.218
+the same way we respond to most such requests. We decided
+
+26:19.266 --> 26:22.730
+to ignore them because it's such a complicated
+
+26:22.842 --> 26:26.442
+matter related to internal politics in the US. We don't want
+
+26:26.498 --> 26:29.954
+to take any. If you, I believe this strongly ignore your
+
+26:29.994 --> 26:33.574
+problems. Most of them do go away. That's very true.
+
+26:34.594 --> 26:38.322
+No one says it, but it's true. That's amazing.
+
+26:38.418 --> 26:40.974
+Have you ever had demands that you can't ignore?
+
+26:42.634 --> 26:45.746
+Well, it depends, right? Unreasonable demands.
+
+26:45.810 --> 26:49.258
+So I would say the largest pressure
+
+26:49.306 --> 26:52.414
+towards telegram is not coming from governments,
+
+26:52.834 --> 26:56.830
+it's coming from Apple and Google. So when it comes
+
+26:56.862 --> 27:01.454
+to freedom of speech, those two platforms, they could basically
+
+27:01.534 --> 27:05.078
+censor whatever you can read access
+
+27:05.206 --> 27:06.634
+on your smartphone.
+
+27:09.014 --> 27:12.966
+So, I mean, do you run the risk of being thrown out of their stores?
+
+27:13.070 --> 27:16.814
+Exactly. That's what they make very clear, that if we
+
+27:16.854 --> 27:20.366
+fail to comply with their guidelines, so they call
+
+27:20.390 --> 27:23.708
+it telegram, could be removed from
+
+27:23.836 --> 27:27.460
+the stores. Well, that would be not a small thing
+
+27:27.492 --> 27:31.068
+for you, right? Well, it won't be a small thing for us because
+
+27:31.196 --> 27:34.844
+obviously a big chunk of the world's population will lose access
+
+27:34.924 --> 27:38.212
+to a valuable tool that they're using every day.
+
+27:38.268 --> 27:42.060
+But, you know, it will not also be a small thing for
+
+27:42.092 --> 27:46.036
+them. I mean, there should. I believe there must
+
+27:46.060 --> 27:50.030
+be find some compromise in such cases. But Apple
+
+27:50.062 --> 27:53.382
+and Google are not very compromising when it comes to the guidelines.
+
+27:53.398 --> 27:57.902
+If they believe some content is against their rules,
+
+27:58.078 --> 28:01.710
+they will see to it that all the apps that are distributed
+
+28:01.782 --> 28:04.990
+through their stores comply
+
+28:05.022 --> 28:08.014
+with these rules. Are any of those rules,
+
+28:08.054 --> 28:11.422
+or do you interpret any of those rules? Do you believe any of them to
+
+28:11.438 --> 28:14.694
+be political in nature?
+
+28:16.594 --> 28:19.714
+Some of them, but it's not the rules.
+
+28:19.754 --> 28:23.254
+It's the application of the rules. The rules themselves,
+
+28:23.954 --> 28:28.994
+they're pretty general. Right. So there
+
+28:29.034 --> 28:32.054
+must be no violence, discrimination,
+
+28:33.554 --> 28:37.058
+publicly available child abuse materials.
+
+28:37.106 --> 28:41.114
+It's hard to disagree with that. Yes. But then when they start
+
+28:41.194 --> 28:44.774
+to apply those rules, sometimes we are not
+
+28:45.514 --> 28:48.522
+agreeing with their interpretations,
+
+28:48.618 --> 28:52.490
+and we try to get back
+
+28:52.522 --> 28:55.122
+to Apple or Google, wherever it is, and say,
+
+28:55.178 --> 28:58.882
+look, we think you got it wrong. We think
+
+28:59.018 --> 29:02.586
+actually this is the legitimate way
+
+29:02.610 --> 29:05.898
+of people expressing their opinions. And sometimes they do agree.
+
+29:05.946 --> 29:09.026
+To their credit, sometimes they disagree. And we still have
+
+29:09.050 --> 29:13.450
+to take some content down, at least in the version of Telegram that is distributed
+
+29:13.522 --> 29:15.414
+through their platforms.
+
+29:17.034 --> 29:20.642
+So there are a bunch of. A number of conflicts going on
+
+29:20.698 --> 29:23.254
+around the world right now, and that may accelerate.
+
+29:24.074 --> 29:27.570
+So would you expect that the number of demands and the
+
+29:27.602 --> 29:31.826
+intensity of those demands, the persistence of those demands would increase as
+
+29:31.890 --> 29:34.524
+the wars become more intense?
+
+29:36.184 --> 29:39.648
+Let's see. I'm really hopeful that the past is behind us.
+
+29:39.736 --> 29:43.204
+I want to be optimistic. I think
+
+29:43.864 --> 29:49.528
+now we reached a point where politicians
+
+29:49.656 --> 29:53.472
+and societies know what to expect from social
+
+29:53.528 --> 29:58.360
+media platforms and where their red
+
+29:58.392 --> 30:01.698
+lines are. We also
+
+30:01.826 --> 30:05.282
+learned much more about the requirements coming
+
+30:05.338 --> 30:10.106
+from both them and Google. Apple and
+
+30:10.130 --> 30:13.866
+our users get better educated as well with what is allowed and
+
+30:13.890 --> 30:16.962
+what's not allowed. So I don't necessarily
+
+30:17.018 --> 30:20.090
+believe that things are going to get worse.
+
+30:20.242 --> 30:24.082
+It does seem like the red line for governments is
+
+30:24.138 --> 30:26.976
+allowing organized opposition to their rule.
+
+30:27.130 --> 30:30.684
+That's what you saw in Russia with Navalny and the Ukraine crisis
+
+30:30.724 --> 30:34.156
+in 2014. That's what you saw from that democratic member
+
+30:34.180 --> 30:36.304
+of Congress after January 6,
+
+30:36.724 --> 30:40.268
+2020. Definitely. There's a pattern here. Telegram has
+
+30:40.316 --> 30:43.548
+been used by protesters in places like
+
+30:43.596 --> 30:46.972
+Hong Kong, Belarus, Kazakhstan,
+
+30:47.148 --> 30:49.924
+even in Barcelona back in the day. Yes.
+
+30:50.004 --> 30:53.290
+So it's been a tool for their
+
+30:53.322 --> 30:56.586
+position to a large extent, but it
+
+30:56.650 --> 31:00.794
+doesn't really matter whether it's a position or the
+
+31:00.834 --> 31:04.130
+ruling party that is using tograph. We apply
+
+31:04.202 --> 31:08.214
+the rules equally to all sides. We don't
+
+31:09.434 --> 31:12.954
+become prejudiced in this way. It's not that we are rooting for the opposition or
+
+31:12.994 --> 31:16.186
+we are rooting for the ruling party. It's not that we
+
+31:16.210 --> 31:20.294
+don't care, but we think it's important to
+
+31:20.594 --> 31:24.610
+have this platform that is neutral to all voices because we believe
+
+31:24.682 --> 31:28.162
+that the competition of different
+
+31:28.258 --> 31:32.098
+ideas can result in progress
+
+31:32.266 --> 31:34.454
+and a better world for everyone.
+
+31:34.874 --> 31:38.490
+That's in stark contrast to, say, Facebook, which has
+
+31:38.522 --> 31:41.866
+said in public, we tip
+
+31:41.890 --> 31:44.642
+the scale in favor of this or that movement in this or that country,
+
+31:44.698 --> 31:48.072
+all far from the west and far from western media attention.
+
+31:48.128 --> 31:51.200
+But they've said that. What do you think of that?
+
+31:51.352 --> 31:53.684
+Tech companies choosing governments?
+
+31:54.544 --> 31:58.376
+Well, I think that's one of the reasons why we ended
+
+31:58.400 --> 32:02.352
+up here in the UAE, out of all places. Right. So you
+
+32:02.368 --> 32:06.464
+don't want to be geopolitically aligned. You don't want to select
+
+32:06.504 --> 32:09.752
+the winners in any of these political
+
+32:09.848 --> 32:13.280
+fights, and that's why you have to be in a neutral place.
+
+32:13.352 --> 32:17.286
+But I think Facebook in particular has a lot
+
+32:17.310 --> 32:20.934
+of reasons, apart from being
+
+32:20.974 --> 32:24.354
+based in the US for doing what they're doing.
+
+32:25.614 --> 32:29.514
+I think every app and platform plays its own role,
+
+32:29.894 --> 32:33.878
+and we believe that humanity does need a neutral
+
+32:33.926 --> 32:38.030
+platform like Telegram that would be respectful
+
+32:38.142 --> 32:40.914
+to people's privacy and freedoms.
+
+32:41.734 --> 32:45.892
+Maybe from a political perspective, it seems like the most provocative
+
+32:45.988 --> 32:48.904
+thing telegram does is offer something called channels,
+
+32:49.324 --> 32:53.252
+which seem sort of ready made for organizing groups
+
+32:53.268 --> 32:56.876
+of people. Can you explain to viewers who aren't familiar with them what a
+
+32:56.900 --> 33:00.284
+telegram channel is? Yes. So Telegram channel
+
+33:00.364 --> 33:04.036
+is a one to many broadcast tool
+
+33:04.140 --> 33:07.780
+that allows people to quickly
+
+33:07.812 --> 33:11.052
+disseminate any message to millions of people.
+
+33:11.188 --> 33:15.276
+So there's a channel, people subscribe to it. It's a
+
+33:15.380 --> 33:19.292
+one way communication, meaning a channel can be
+
+33:19.348 --> 33:22.996
+used by, say, a president or a head of
+
+33:23.020 --> 33:26.944
+state. And everybody else will not be able to
+
+33:27.804 --> 33:30.956
+send a message to the president, but the president will be able to send a
+
+33:30.980 --> 33:33.900
+message to all of the people who subscribe to his channel.
+
+33:33.972 --> 33:37.544
+Yes, or her channel. So the point here is
+
+33:38.354 --> 33:41.642
+channels are so easy to use and they're
+
+33:41.698 --> 33:45.842
+so deeply integrated in the messaging user interface
+
+33:46.018 --> 33:49.570
+that they became extremely popular. So you receive it like a
+
+33:49.602 --> 33:53.362
+text. Exactly. So it's a very familiar
+
+33:53.418 --> 33:57.314
+form for a lot of people. And since we launched channels
+
+33:57.394 --> 34:00.810
+eight years ago, I believe a few
+
+34:00.842 --> 34:04.406
+other apps, popular apps, followed in our footsteps,
+
+34:04.530 --> 34:07.830
+copied that feature as well. Not nearly as advanced
+
+34:07.862 --> 34:11.366
+as we have, but it shows that it's a
+
+34:11.470 --> 34:15.238
+really high quality and demanded
+
+34:15.326 --> 34:17.914
+feature that the world needs.
+
+34:18.934 --> 34:21.238
+I think it's interesting, and you don't have to answer any of these questions if
+
+34:21.246 --> 34:25.334
+you don't want it, if it's too personal, but you're the owner, you own it.
+
+34:25.454 --> 34:29.870
+And it's very unusual. In fact, I've never seen it to
+
+34:29.902 --> 34:33.490
+have a large business like this owned by one person.
+
+34:33.682 --> 34:36.850
+Why didn't you take? And you could have cashed in on private equity money along
+
+34:36.882 --> 34:39.734
+the way, but you didn't. Why didn't you?
+
+34:40.914 --> 34:44.898
+Well, that's true. As of now, Telgram was 100% owned by myself,
+
+34:45.026 --> 34:48.826
+which is, like I said, quite unusual.
+
+34:49.010 --> 34:53.122
+I've never heard of that before. The reason I
+
+34:53.178 --> 34:56.194
+tried to stay
+
+34:56.234 --> 34:59.752
+away from venture capital money, at least the early
+
+34:59.808 --> 35:03.504
+stages of our development, is because we wanted to be independent.
+
+35:03.664 --> 35:07.104
+We knew that our mission and
+
+35:07.144 --> 35:10.328
+our goals are not necessarily consistent with
+
+35:10.376 --> 35:13.944
+the goals of funds that
+
+35:14.024 --> 35:17.320
+could be investing into us. And also for me,
+
+35:17.352 --> 35:20.504
+it was never about money. So I have a few
+
+35:20.584 --> 35:24.232
+hundred million dollars in my bank account or in bitcoin
+
+35:24.288 --> 35:27.900
+since ten years ago, and I don't do anything
+
+35:27.932 --> 35:31.624
+with it. I don't own any real estate,
+
+35:32.244 --> 35:35.620
+jets or yachts. I don't
+
+35:35.652 --> 35:38.876
+think this lifestyle is for
+
+35:38.900 --> 35:42.388
+me. I like to focus on what we are doing with telegram.
+
+35:42.436 --> 35:46.324
+You don't own anything? Like big
+
+35:46.364 --> 35:49.716
+assets? You don't own no big assets, an island in Hawaii or.
+
+35:49.780 --> 35:53.550
+No, no land, no real
+
+35:53.582 --> 35:57.310
+estate, nothing. Why? Well, because for me,
+
+35:57.342 --> 36:01.062
+my number one priority in life is my freedom. And once you start
+
+36:01.118 --> 36:04.934
+buying things first, it will tie
+
+36:04.974 --> 36:08.350
+you down to a physical location. In my view,
+
+36:08.422 --> 36:12.158
+it's my personal view, I don't have nothing against people who are buying real estate,
+
+36:12.206 --> 36:15.702
+but in my personal view, it would be like this for me.
+
+36:15.798 --> 36:19.390
+And the second reason is I like to stay focused on what
+
+36:19.422 --> 36:22.662
+we do at telegram. So I know that if I
+
+36:22.678 --> 36:26.206
+buy a house, I buy a jet, something like
+
+36:26.230 --> 36:29.750
+that. I would be spending time on trying to make
+
+36:29.782 --> 36:33.774
+it nice. Yeah, this will require
+
+36:33.814 --> 36:37.182
+a lot of time and effort. Would you go with leather seats or velvet seats?
+
+36:37.278 --> 36:40.190
+Exactly. And you're not even going to choose?
+
+36:40.262 --> 36:44.394
+Yes. For me, I would rather make decisions
+
+36:44.434 --> 36:48.330
+that would influence how a billion people communicate
+
+36:48.482 --> 36:51.762
+rather than choosing the color of seats in
+
+36:51.818 --> 36:54.986
+the house that only I and my relatives from probably a bunch of my
+
+36:55.010 --> 36:55.974
+friends will see.
+
+36:57.634 --> 37:01.282
+Interesting. And you didn't take because I just want to just have
+
+37:01.298 --> 37:04.874
+to say the third time. Haven't seen this before. You obviously
+
+37:04.914 --> 37:08.800
+were famous as a young man, as a company builder and entrepreneur,
+
+37:08.922 --> 37:12.948
+and so you could have really taken a lot of money, and you didn't because
+
+37:12.996 --> 37:16.748
+you didn't want to be controlled. I just didn't
+
+37:16.796 --> 37:20.420
+see any reason to do that. You know, I had enough money to get by.
+
+37:20.492 --> 37:24.268
+Well, to be completely fair, Telgrom did take
+
+37:24.356 --> 37:27.172
+outside money. We issued bonds three years ago,
+
+37:27.268 --> 37:30.544
+so we raised debt, and that was.
+
+37:33.004 --> 37:37.004
+And before that, we had a cryptocurrency project that also
+
+37:37.164 --> 37:40.740
+raised some funds. So there were instances where
+
+37:40.932 --> 37:45.052
+we raised outside funding, but when
+
+37:45.068 --> 37:48.980
+it comes to company equity, yeah. You didn't give up ownership. We didn't
+
+37:49.012 --> 37:52.276
+give anyone ownership or voting control or anything like
+
+37:52.300 --> 37:55.628
+that because we also believe in efficiency.
+
+37:55.676 --> 37:58.996
+I think that having myself as the
+
+37:59.060 --> 38:02.756
+sole owner, director, and product manager for
+
+38:02.820 --> 38:06.148
+this extensive period of time in the company's
+
+38:06.196 --> 38:09.516
+development allowed us to move faster and be. How could you be
+
+38:09.540 --> 38:13.196
+the only product manager? Are you still the only product
+
+38:13.260 --> 38:16.636
+manager in the company? Exactly. I still come
+
+38:16.660 --> 38:20.068
+up with most of the features. I still
+
+38:20.236 --> 38:23.068
+work directly with every engineer,
+
+38:23.196 --> 38:26.344
+every designer who is implementing these features.
+
+38:27.244 --> 38:30.844
+I'm running this company because I enjoy it. I'm the only product manager
+
+38:30.884 --> 38:35.524
+because I think this is the way I can contribute.
+
+38:36.184 --> 38:39.424
+How big is your HR department? Zero.
+
+38:39.544 --> 38:43.336
+Well, you could say it's me because the way we
+
+38:43.360 --> 38:46.640
+hire engineers. No, no. You need a big HR department. You don't think. You don't
+
+38:46.672 --> 38:47.844
+suffer without one.
+
+38:49.384 --> 38:53.096
+We, in a way, decentralized that. We started
+
+38:53.240 --> 38:56.776
+a platform where we host contests
+
+38:56.920 --> 39:00.162
+for engineers. It's actually contest.com.
+
+39:00.258 --> 39:03.626
+We have this separate platform for that. And we
+
+39:03.650 --> 39:06.970
+select the best of the best engineers as a result of
+
+39:07.002 --> 39:11.010
+the competitions that we organize.
+
+39:11.162 --> 39:14.218
+We hold them every month or two months.
+
+39:14.386 --> 39:18.138
+So after a series of these competitions, we select
+
+39:18.186 --> 39:21.666
+the best of the best of the best. And they then
+
+39:21.770 --> 39:25.646
+maybe could join our team, which is just
+
+39:25.750 --> 39:28.942
+about 30 engineers. So it's really compact,
+
+39:28.998 --> 39:33.154
+the team, super efficient. It's like a Navy SEAL team,
+
+39:33.734 --> 39:38.046
+and this is how we operate. We don't need HR
+
+39:38.150 --> 39:41.262
+department to find super
+
+39:41.318 --> 39:44.934
+talented engineers. Why doesn't everyone do
+
+39:44.974 --> 39:48.702
+this? I look at some of these tech companies, or Elon Musk famously when
+
+39:48.718 --> 39:51.492
+he showed up at Twitter, I mean, there were people doing things that he didn't
+
+39:51.508 --> 39:54.596
+even know they were doing, and they didn't know what they were doing. They were
+
+39:54.620 --> 39:57.508
+like, there was a world peace department and a foosball department.
+
+39:57.596 --> 40:01.596
+And why doesn't everybody run
+
+40:01.620 --> 40:05.100
+their business like you? Well, it's an interesting question.
+
+40:05.252 --> 40:09.292
+I think it all boils down to the question of
+
+40:09.468 --> 40:12.996
+independence, in a way. I asked this question to the
+
+40:13.020 --> 40:16.594
+predecessors of Elon, Jack Dorsey, Jack and
+
+40:19.334 --> 40:23.526
+his predecessor as well. What'd you say? Dick Costello,
+
+40:23.550 --> 40:27.270
+I think his name. And Jack, he told
+
+40:27.302 --> 40:30.646
+me that if I told him, look, you can run
+
+40:30.670 --> 40:34.022
+this company with 20 people, you don't need so many people here.
+
+40:34.198 --> 40:37.734
+And the response was, I agree
+
+40:37.774 --> 40:40.674
+with you, but if we start firing so many people,
+
+40:41.434 --> 40:44.474
+it will make the Wall street scared.
+
+40:44.594 --> 40:48.018
+They will think something's very wrong with the company, and we
+
+40:48.026 --> 40:51.866
+don't want to do that. And that's why we keep all
+
+40:51.890 --> 40:55.634
+these employees around. So to keep the stock price high,
+
+40:55.714 --> 40:59.706
+he had to run it inefficiently. I mean,
+
+40:59.730 --> 41:02.938
+that's what you're saying. If I understood him correctly,
+
+41:03.026 --> 41:07.296
+that's what. But to his credit, Elon has to
+
+41:07.490 --> 41:11.052
+take Twitter private before he could
+
+41:11.228 --> 41:12.544
+do all the.
+
+41:14.724 --> 41:17.844
+I mean, there's something sort of profound in what you're saying. I mean, the whole
+
+41:17.884 --> 41:21.316
+point of a publicly traded company, or one of the points so the public can
+
+41:21.340 --> 41:25.036
+participate in the ownership of the company, but also so outsiders can assess
+
+41:25.100 --> 41:28.492
+the operations of the company. And so there's transparencies. We know how the
+
+41:28.508 --> 41:31.024
+company is run because it's owned by the public.
+
+41:32.204 --> 41:35.614
+And so it would be, by definition, more efficient, you would
+
+41:35.654 --> 41:39.270
+think. But you're saying that it's wildly less
+
+41:39.302 --> 41:42.438
+efficient, that you wind up with the foosball department when it's publicly traded, but when
+
+41:42.446 --> 41:45.222
+it's privately held, you don't. I mean, that's kind of the opposite of what you
+
+41:45.238 --> 41:48.982
+would think, right? Well, I guess most tech founders
+
+41:49.038 --> 41:52.794
+would actually agree that running a public company
+
+41:53.774 --> 41:57.038
+is less efficient than running a private company,
+
+41:57.206 --> 42:00.574
+because you have to be accountable to much more people.
+
+42:00.694 --> 42:03.714
+There's a lot of redundancy, bureaucracy involved.
+
+42:04.554 --> 42:08.274
+So from a purely efficiency standpoint,
+
+42:08.434 --> 42:11.066
+I would argue, and I think a lot of people would agree with me,
+
+42:11.090 --> 42:14.554
+that when a public company is suboptimal,
+
+42:14.674 --> 42:17.934
+however, there are other advantages of
+
+42:18.954 --> 42:22.362
+getting listed. And of course, that is
+
+42:22.458 --> 42:25.682
+relevant when you want to acquire other companies. Well, cash,
+
+42:25.778 --> 42:29.618
+yes, you can have access to cheap capital. There is a
+
+42:29.626 --> 42:33.042
+lot of things you can do, but you don't want to do any of
+
+42:33.058 --> 42:36.714
+those things. Well, not presently,
+
+42:36.794 --> 42:40.730
+definitely. I am enjoying running my company the way it is. Well, who knows
+
+42:40.762 --> 42:44.346
+what the future holds? But as of now, I think we are doing
+
+42:44.370 --> 42:47.738
+a great job with telegram. 900 million
+
+42:47.786 --> 42:52.866
+users. We'll probably cross a billion monthly
+
+42:52.890 --> 42:55.534
+active users within a year from now.
+
+42:55.874 --> 42:59.510
+I think we're doing great. Why would we lose this
+
+42:59.542 --> 43:03.394
+momentum right now? Can I go back to something you said at the outset?
+
+43:03.774 --> 43:07.382
+You don't have an HR department. You only have 30 engineers working
+
+43:07.438 --> 43:11.638
+for you. You run the products, you own the company.
+
+43:11.766 --> 43:15.630
+Such a tight organization. But how do you get new users
+
+43:15.662 --> 43:19.126
+if you spend zero money for acquisitions,
+
+43:19.230 --> 43:22.526
+if you're not advertising, if you're not paying to bring people in, how do you
+
+43:22.550 --> 43:24.714
+do that? How do you get to a billion for free?
+
+43:25.534 --> 43:29.350
+But because people love our product. What we realized pretty early
+
+43:29.422 --> 43:31.674
+on is that people are smart.
+
+43:32.974 --> 43:36.074
+People like to use good things,
+
+43:36.374 --> 43:40.634
+and they don't like to use inferior things.
+
+43:40.934 --> 43:45.078
+That's why whenever you have a person who started
+
+43:45.126 --> 43:48.806
+to use telegram and they're there for a while,
+
+43:48.910 --> 43:51.874
+and they start to discover all the features, all their.
+
+43:52.544 --> 43:55.844
+The speed, the security, the probes, everything that we have,
+
+43:56.664 --> 44:00.124
+they don't want to go back. And they start inviting their friends,
+
+44:00.424 --> 44:04.264
+recommending that you should really check this app out because
+
+44:04.304 --> 44:07.992
+it's so much better than everything else. And also because people realize
+
+44:08.048 --> 44:11.768
+that whatever matching apps they're using right now,
+
+44:11.816 --> 44:15.160
+they're, like, five, six years behind. They're copying what
+
+44:15.192 --> 44:18.620
+we did six years ago, and that's not
+
+44:18.652 --> 44:22.068
+a very high quality copy that they
+
+44:22.116 --> 44:25.756
+make of our features. So people love quality. That's why they move.
+
+44:25.820 --> 44:28.828
+They also love the independence. They also love the privacy.
+
+44:28.996 --> 44:32.324
+They love the freedom. There are a lot of reasons why
+
+44:32.364 --> 44:35.708
+somebody would switch to telegram from other apps. So one
+
+44:35.716 --> 44:39.548
+of the things we learned when Elon Musk bought Twitter is that the intel agencies,
+
+44:39.596 --> 44:43.350
+not just us, but a bunch of other countries, the usual
+
+44:43.492 --> 44:47.162
+suspects, were all over the company. I mean, some of them
+
+44:47.178 --> 44:50.610
+were present working at the company. They had access to the direct messages.
+
+44:50.682 --> 44:53.826
+You can just imagine. Well, you know, because you run one. But the
+
+44:53.850 --> 44:57.546
+wealth of data flowing through would
+
+44:57.570 --> 45:01.026
+be of great interest to governments. Does that
+
+45:01.050 --> 45:04.378
+make you paranoid that you'll be penetrated? I mean,
+
+45:04.466 --> 45:08.014
+I assume governments would like to know what's going on
+
+45:08.674 --> 45:11.916
+sort of privately on telegram. Well, there's definitely a lot of
+
+45:11.940 --> 45:14.900
+responsibility that we have on our shoulders,
+
+45:15.012 --> 45:18.612
+and I wouldn't say we are paranoid, but I
+
+45:18.628 --> 45:23.852
+think it makes sense to stay prudent and not
+
+45:23.988 --> 45:28.468
+being too accessible, not traveling to
+
+45:28.596 --> 45:32.484
+weird places. You don't travel to weird places. I hope
+
+45:32.524 --> 45:35.684
+not. I travel to places
+
+45:35.724 --> 45:40.028
+where I have confidence that those
+
+45:40.076 --> 45:43.964
+places are consistent with
+
+45:44.044 --> 45:47.492
+what we do in our values. I don't go to any of
+
+45:47.508 --> 45:51.188
+the big geopolitical powers of the countries like China
+
+45:51.276 --> 45:54.652
+or Russia or even the US. You don't go
+
+45:54.668 --> 45:57.564
+to the US. I try not to. I can go,
+
+45:57.644 --> 46:01.532
+but it's too much attention like I've described before.
+
+46:01.628 --> 46:04.772
+Yeah, because at some point, if you run something like this, you're a player
+
+46:04.828 --> 46:08.124
+in world politics. I mean, by def, whether you want to be or not,
+
+46:08.164 --> 46:11.216
+don't you think? We definitely don't want to be a player.
+
+46:11.360 --> 46:15.336
+We want to be a neutral platform that is impartial
+
+46:15.440 --> 46:18.324
+and doesn't take any side.
+
+46:18.984 --> 46:22.684
+But you're probably right that there's some role we have to play.
+
+46:23.064 --> 46:26.640
+Well, not taking a side is the one thing you're not allowed to
+
+46:26.672 --> 46:30.168
+do, right? I mean, aren't you required to take a side in the modern
+
+46:30.216 --> 46:33.728
+world? I think that's a big problem because I think
+
+46:33.816 --> 46:38.412
+that kind of attitude
+
+46:38.508 --> 46:41.668
+can result in our world becoming a more dangerous place.
+
+46:41.796 --> 46:45.676
+Because at the end of the day, we all have to try
+
+46:45.700 --> 46:49.700
+to understand each other and try to get
+
+46:49.732 --> 46:53.324
+closer to each other in terms of getting to know the
+
+46:53.364 --> 46:57.340
+positions of the other people, even though they're
+
+46:57.412 --> 47:00.780
+drastically different from our own positions. And that's how we
+
+47:00.812 --> 47:03.954
+get to some compromise and move forward.
+
+47:04.294 --> 47:08.366
+If we're strictly divided and everybody is required
+
+47:08.430 --> 47:12.350
+to take a side, we can't take a side because we are this
+
+47:12.382 --> 47:16.486
+platform that people should use to
+
+47:16.630 --> 47:20.182
+collaborate and to find common ground and
+
+47:20.358 --> 47:23.766
+hopefully to move forward. If we lose that, we can
+
+47:23.790 --> 47:26.794
+end up in a much more dangerous place.
+
+47:27.714 --> 47:31.418
+How often do you intersect with the National Security Agency?
+
+47:31.466 --> 47:34.970
+NSA? And I asked that as someone whose texts were read by them,
+
+47:35.042 --> 47:38.770
+so I know that they are very active in this world. What's your
+
+47:38.802 --> 47:42.466
+experience been? Well, I think the
+
+47:42.490 --> 47:45.586
+NSA is not an
+
+47:45.610 --> 47:49.002
+agency that works with you directly. Right. I don't comment
+
+47:49.098 --> 47:52.250
+here. You're so diplomatic. I love it.
+
+47:52.442 --> 47:55.784
+The NSA is not an agency that works with you directly. No, that is true.
+
+47:56.124 --> 47:59.564
+That is true. So my knowledge
+
+47:59.604 --> 48:02.460
+of my interactions with the NSA is very limited.
+
+48:02.532 --> 48:06.464
+Yes. I could read something in the newspapers about
+
+48:07.764 --> 48:11.172
+my phone being penetrated with Pegasus
+
+48:11.228 --> 48:14.772
+or something like that. I have no idea whether it's true or
+
+48:14.788 --> 48:18.300
+not, but this is the only source of information
+
+48:18.412 --> 48:22.018
+I can have about me personally being
+
+48:22.066 --> 48:25.274
+of interest to any of the
+
+48:25.314 --> 48:29.066
+secret agencies. But you've got to think, even though you haven't
+
+48:29.090 --> 48:33.258
+done an interview in seven years ish, you know,
+
+48:33.386 --> 48:36.386
+it's widely known by people who are interested who you are and your role in
+
+48:36.410 --> 48:39.762
+this. I mean, you've got to think you're under just crazy amounts of surveillance.
+
+48:39.818 --> 48:43.530
+Wouldn't you think that's probably true. You know,
+
+48:43.642 --> 48:47.692
+it would sound funny, but I assume by default
+
+48:47.818 --> 48:51.604
+that the devices I use are compromised
+
+48:52.144 --> 48:55.496
+because you will still use an iPhone or an Android phone.
+
+48:55.560 --> 48:58.936
+And after experiencing what I
+
+48:58.960 --> 49:03.520
+experienced in the US, I have very limited faith
+
+49:03.632 --> 49:07.384
+in platforms developed in the US.
+
+49:07.544 --> 49:11.016
+From a security standpoint, yes. Privacy standpoint,
+
+49:11.080 --> 49:14.564
+exactly. In a lot of countries,
+
+49:15.314 --> 49:18.890
+ours, America included, spying is described as, quote,
+
+49:18.922 --> 49:22.090
+security. You're looking at it from the other perspective.
+
+49:22.282 --> 49:25.938
+You're assuming that security is privacy and my right not to be spied upon.
+
+49:25.986 --> 49:29.554
+But big governments describe spying upon you as
+
+49:29.594 --> 49:31.934
+security. Thank you for this correction.
+
+49:34.514 --> 49:37.962
+So, last question. Do you, since you've done this since you were
+
+49:37.978 --> 49:41.582
+in college and you've been at the center of it, where do
+
+49:41.598 --> 49:45.126
+you see it going? And by this, I mean the free exchange, the private
+
+49:45.190 --> 49:48.854
+exchange of information between sovereign individuals,
+
+49:49.014 --> 49:51.274
+human beings, non slaves.
+
+49:52.614 --> 49:56.486
+When I was a child, that was possible. It's increasingly difficult. Are we
+
+49:56.510 --> 49:59.314
+moving toward a world where there just is no private communication,
+
+49:59.934 --> 50:03.274
+or do you think that privacy will remain
+
+50:03.814 --> 50:07.554
+despite, say, AI or just massive increases in computing power?
+
+50:09.844 --> 50:13.504
+Well, this depends on the extent of privacy.
+
+50:15.124 --> 50:19.068
+When you say privacy will remain, do we mean that we have absolute privacy
+
+50:19.116 --> 50:22.964
+now? I don't think that we do. And I think the world is becoming less
+
+50:23.004 --> 50:26.508
+amenable. Government's becoming less tolerant of privacy.
+
+50:26.596 --> 50:30.584
+That's clearly the trend, because they have more technological power.
+
+50:31.844 --> 50:35.824
+But will they win? I guess. Will there ever be
+
+50:36.434 --> 50:39.594
+way to preserve privacy? You know,
+
+50:39.674 --> 50:43.362
+can, is there a place for it? I believe in that. I'm an
+
+50:43.378 --> 50:47.642
+optimist. I think some new secure
+
+50:47.698 --> 50:51.174
+hardware communication devices will be created
+
+50:51.674 --> 50:55.514
+in a similar way that now we have hardware
+
+50:55.554 --> 50:59.534
+wallets to store your cryptocurrency. Yes. Maybe we'll
+
+50:59.834 --> 51:04.404
+have secure communication
+
+51:05.144 --> 51:08.736
+devices to send messages or do
+
+51:08.840 --> 51:13.112
+voice calls. It's possible. I do believe that
+
+51:13.288 --> 51:16.284
+the world develops in cycles,
+
+51:16.704 --> 51:19.768
+and if things seem
+
+51:19.816 --> 51:23.608
+to go in one direction today doesn't
+
+51:23.696 --> 51:26.924
+mean that tomorrow they will go the same direction.
+
+51:27.424 --> 51:31.016
+I also feel that at some point, people will
+
+51:31.040 --> 51:34.504
+get tired of what they experience
+
+51:34.584 --> 51:39.964
+today and they would decide to move
+
+51:40.344 --> 51:44.240
+to some other direction. So I seen it
+
+51:44.312 --> 51:47.400
+after COVID, for example, during COVID you
+
+51:47.432 --> 51:50.920
+had a lot of restrictions also on
+
+51:50.952 --> 51:53.984
+social media platforms. Most social media platforms,
+
+51:54.024 --> 51:57.468
+you were not really allowed to
+
+51:57.516 --> 52:01.852
+express doubt in relation to lockdowns,
+
+52:01.988 --> 52:06.100
+vaccines, or masks. And at
+
+52:06.132 --> 52:09.988
+some point, I could feel the sentiment changed.
+
+52:10.156 --> 52:14.064
+People started to feel very, very tired and sometimes angry
+
+52:15.364 --> 52:18.824
+with the fact that they were not allowed to express their opinions.
+
+52:19.364 --> 52:23.396
+Particularly after the end of the,
+
+52:23.500 --> 52:27.544
+the pandemic. A lot of people started to be
+
+52:30.444 --> 52:34.620
+even more skeptical about the restrictions in
+
+52:34.692 --> 52:38.060
+their freedoms that they experienced during the pandemic. What was
+
+52:38.092 --> 52:42.196
+your position as a business owner during
+
+52:42.380 --> 52:46.460
+COVID You must have come under pressure to censor opinions
+
+52:46.532 --> 52:50.494
+on lockdowns, vaccines masking. How did you respond?
+
+52:51.114 --> 52:54.570
+So our position is pretty straightforward. We're a neutral platform.
+
+52:54.682 --> 52:58.586
+We were helping governments to spread their message about the
+
+52:58.610 --> 53:02.290
+lockdowns and masks and vaccines. We had dozens of governments
+
+53:02.402 --> 53:05.974
+who we really helped disseminate their information.
+
+53:06.274 --> 53:09.706
+But we also didn't want to restrict the
+
+53:09.730 --> 53:12.938
+voices that were critical of all these measures.
+
+53:13.106 --> 53:16.438
+We thought it made sense for these
+
+53:16.486 --> 53:20.558
+opposing views to collide and hopefully
+
+53:20.726 --> 53:24.670
+see some truth come out of those debates.
+
+53:24.782 --> 53:28.982
+And, of course, we got criticized for that. But looking
+
+53:29.038 --> 53:32.918
+back, I think it was the right strategy. So you allowed people to voice doubts
+
+53:32.966 --> 53:36.134
+about the so called science throughout the
+
+53:36.174 --> 53:39.326
+experience? Exactly. During the pandemic,
+
+53:39.390 --> 53:43.530
+we, I think, were one of the few or maybe the only major
+
+53:43.642 --> 53:47.134
+social media platform that didn't
+
+53:47.794 --> 53:51.694
+take down accounts that were
+
+53:52.034 --> 53:55.386
+skeptical in relation to some
+
+53:55.410 --> 53:58.642
+of these measures. So why are you not famous and treated as
+
+53:58.658 --> 54:00.214
+a hero in the United States?
+
+54:02.674 --> 54:05.914
+Shouldn't there be a parade in your honor if you're the
+
+54:05.954 --> 54:09.410
+only social media platform not to take down what turned out to be true,
+
+54:09.482 --> 54:13.994
+or to some extent true, certainly more true than the CDC guidance.
+
+54:14.614 --> 54:18.474
+I mean, why weren't you times man of the year?
+
+54:19.134 --> 54:22.274
+Why isn't your face on the nickel?
+
+54:25.174 --> 54:27.434
+I'm not an expert in the US politics,
+
+54:29.574 --> 54:33.750
+but to be fair, you have now Twitter
+
+54:33.782 --> 54:38.624
+or x that seemingly becoming more
+
+54:39.124 --> 54:42.984
+pro freedom of speech. I think it is.
+
+54:43.884 --> 54:48.068
+It's a great development. And back to our earlier discussion
+
+54:48.196 --> 54:51.764
+about how all of this is developing
+
+54:51.804 --> 54:55.864
+in cycles. Things are starting to change. It seems
+
+54:56.844 --> 55:00.984
+so do you. But in some ways, Elon buying
+
+55:01.564 --> 55:05.204
+Twitter sort of ends your monopoly,
+
+55:06.144 --> 55:10.176
+but you still greet it cheerfully. You're still in favor
+
+55:10.200 --> 55:14.040
+of it. Definitely. We love the fact that Elon
+
+55:14.072 --> 55:17.456
+bought Twitter. We thought it was a great development for
+
+55:17.480 --> 55:21.184
+a number of reasons. First reason is just innovation.
+
+55:21.304 --> 55:25.040
+You could see x doing trying a lot of things.
+
+55:25.112 --> 55:28.152
+Some of them will turn out to be mistakes,
+
+55:28.288 --> 55:32.330
+some of them will work, but at least they're trying to innovate. That's something
+
+55:32.402 --> 55:35.674
+we didn't have outside of Telegram and a
+
+55:36.174 --> 55:40.054
+few other companies in this industry for the last ten years, what you
+
+55:40.354 --> 55:44.362
+saw from the big players, they would rather
+
+55:44.418 --> 55:47.730
+copy the proven models, the features
+
+55:47.762 --> 55:51.254
+that apps like Telegram launched,
+
+55:51.674 --> 55:55.134
+and just scaled them on a larger audience.
+
+55:55.654 --> 55:59.390
+These features would be pale reflections of what we
+
+55:59.422 --> 56:03.006
+built. But this was the way those companies operate
+
+56:03.030 --> 56:07.114
+and still operate. What axe is trying to do is
+
+56:07.574 --> 56:11.414
+in line. What we are building innovation,
+
+56:11.494 --> 56:14.822
+trying different things, trying to give power to
+
+56:14.838 --> 56:17.886
+the creators, trying to
+
+56:17.910 --> 56:21.270
+get the ecosystem economy going. Those are all exciting
+
+56:21.342 --> 56:24.786
+things. And I think we need more companies like
+
+56:24.810 --> 56:29.946
+that. I don't know if it's good for humanity that Elon
+
+56:30.010 --> 56:33.394
+is spending so much time on Twitter making it better, but it's definitely
+
+56:33.434 --> 56:35.134
+good for the social media industry.
+
+56:37.274 --> 56:40.614
+When you see the guys who run these other companies,
+
+56:42.074 --> 56:45.122
+do you know them? And do you ever talk about freedom of speech? I mean,
+
+56:45.138 --> 56:47.842
+if you're running, run into mark, not, you don't have to answer, of course,
+
+56:47.858 --> 56:50.134
+if you don't want, but like, if you run into Mark Zuckerberg.
+
+56:51.794 --> 56:55.530
+Yeah, we met with Mark more than ten years ago.
+
+56:55.602 --> 56:59.442
+I was still running VK, and I told them,
+
+56:59.538 --> 57:03.374
+I told Mark and his colleagues about our
+
+57:04.674 --> 57:08.594
+app platform. We launched an app platform, I think it was 2009,
+
+57:08.674 --> 57:12.214
+VK. They were very interested. It was an interesting meeting.
+
+57:14.834 --> 57:18.536
+They ended up trying to copy not what we
+
+57:18.560 --> 57:21.364
+did, but what I told them we did.
+
+57:22.504 --> 57:25.880
+It was funny. I remember him
+
+57:25.912 --> 57:30.272
+asking me whether we were planning to start
+
+57:30.328 --> 57:34.328
+something on a global basis,
+
+57:34.376 --> 57:38.924
+on the global level, like go for international expansion.
+
+57:39.264 --> 57:43.164
+I said no, and I asked him whether he was going to
+
+57:43.654 --> 57:47.830
+tried to capture more of my domestic
+
+57:47.862 --> 57:51.334
+market where I was working out, and he said no.
+
+57:51.454 --> 57:55.302
+And we both ended up doing exactly that in two or
+
+57:55.318 --> 57:58.918
+three weeks. So I'm thinking I shouldn't go into business
+
+57:58.966 --> 58:00.274
+with Mark Zuckerberg.
+
+58:03.454 --> 58:04.394
+No comment.
+
+58:07.294 --> 58:11.054
+Pavel Giraffe, thank you very much. This is a great conversation.
+
+58:11.094 --> 58:14.554
+I appreciate, and we're rooting for you. Thank you for having me. Of course,
+
+58:18.094 --> 58:21.702
+free speech is bigger than any one person or any one organization.
+
+58:21.758 --> 58:25.086
+Societies are defined by what they will not permit. What we're watching is
+
+58:25.110 --> 58:28.206
+the total inversion of virtue. Hey,
+
+58:28.230 --> 58:31.630
+it's Tucker Carlson. The Internet is crowded with interesting things that
+
+58:31.662 --> 58:35.158
+don't really matter. On TCN, we attempt to bring you interesting things
+
+58:35.206 --> 58:38.454
+that actually do matter. And a lot of them,
+
+58:38.614 --> 58:41.558
+interviews, long form and short videos,
+
+58:41.606 --> 58:46.446
+documentaries, you can find all of it on tuckercarlson.com,
+
+58:46.590 --> 58:47.334
+and we hope you will.
