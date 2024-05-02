@@ -50,5 +50,7 @@ def create_subtitles(video_code):
             print("Error during transcription:", e)
     else:
         print("No MP3 files found in the 'videos' folder")
-        #pip install httpx==0.24.1
-        #googletrans-4.0.0rc1
+
+        # pip install httpx==0.24.1
+        # pip install googletrans-4.0.0rc1
+        # pip install assemblyai
